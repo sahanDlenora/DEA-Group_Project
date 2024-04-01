@@ -1,4 +1,5 @@
-
+<%@page import="java.sql.Connection"%>
+<%@page import="com.DB.DBConnect"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -12,7 +13,10 @@
     <body>
         <%@include file="All_Components/navbar.jsp" %>
         
+        <a href="register.jsp">REGISTER</a>
+        
         <h1>INDEX BODY</h1>
+        
         
         <%@include file="All_Components/footer.jsp" %>
     </body>
