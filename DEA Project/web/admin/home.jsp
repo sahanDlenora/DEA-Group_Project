@@ -8,7 +8,11 @@
     </head>
     <body>
         <%@include file="navbar.jsp" %>
+        
+        
         <h1>Admin:Home</h1>
+        
+        
         <%@include file="footer.jsp" %>
     </body>
 </html>
