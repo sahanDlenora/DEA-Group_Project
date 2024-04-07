@@ -10,8 +10,8 @@ public class UserDao {
 
     public int registerUser(User user) throws ClassNotFoundException {
         String INSERT_USERS_SQL = "INSERT INTO user"
-                + "(id,name,email,phone_number,password) VALUES"
-                + "(?,?,?,?,?);";
+                + "(name,email,phone_number,password) VALUES"
+                + "(?,?,?,?);";
 
         int result = 0;
 
@@ -21,11 +21,11 @@ public class UserDao {
                 .getConnection("jdbc:mysql://localhost:3306/deaproject_db","root","");
                 PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
 
-            preparedStatement.setInt(1, 1);
-            preparedStatement.setString(2, user.getName());
-            preparedStatement.setString(3, user.getEmail());
-            preparedStatement.setString(4, user.getPnumber());
-            preparedStatement.setString(5, user.getPassword());
+            
+            preparedStatement.setString(1, user.getName());
+            preparedStatement.setString(2, user.getEmail());
+            preparedStatement.setString(3, user.getPnumber());
+            preparedStatement.setString(4, user.getPassword());
 
             System.out.println("preparedStatement");
 
