@@ -15,10 +15,10 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="text-center">Registration Page</h4>
-                            <form action="register" method="post">
+                            <form action="UserServlet" method="post">
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Enter Full Name : </label>
-                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required="required" name="fullname">
+                                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required="required" name="name">
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Email address : </label>
@@ -26,7 +26,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputEmail1" class="form-label">Phone No : </label>
-                                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required="required" name="phnumber">
+                                    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required="required" name="pnumber">
                                 </div>
                                 <div class="mb-3">
                                     <label for="exampleInputPassword1" class="form-label">Password : </label>

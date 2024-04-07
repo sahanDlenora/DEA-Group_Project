@@ -24,7 +24,7 @@
         <div class="container">
             <div class="row p-5">
                 <div class="col-md-3 ">
-                    <a href="AddItems.jsp">
+                    <a href="addItems.jsp">
                     <div class="card">
                         <div class="card-body text-center">
                             <i class="fas fa-plus-square fa-3x text-primary"></i><br>

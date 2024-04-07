@@ -1,28 +1,13 @@
-package com.entity;
+package net.javaguides.registration.model;
 
 public class User {
-    
-    private int id;
     private String name;
     private String email;
-    private String phno;
+    private String pnumber;
     private String password;
-    
-    public User(){
-        super();
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
-        
     }
 
     public void setName(String name) {
@@ -37,12 +22,12 @@ public class User {
         this.email = email;
     }
 
-    public String getPhno() {
-        return phno;
+    public String getPnumber() {
+        return pnumber;
     }
 
-    public void setPhno(String phno) {
-        this.phno = phno;
+    public void setPnumber(String pnumber) {
+        this.pnumber = pnumber;
     }
 
     public String getPassword() {
@@ -53,10 +38,6 @@ public class User {
         this.password = password;
     }
 
-    @Override
-    public String toString() {
-        return "User{" + "id=" + id + ", name=" + name + ", email=" + email + ", phno=" + phno + ", password=" + password + '}';
-    }
     
     
     
