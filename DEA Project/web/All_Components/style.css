@@ -1,3 +1,25 @@
-h1{
-    color: green;
+.bg-custom
+{
+    background-color: #00796b;
 }
+.me-4:hover 
+{
+    background-color: white;
+   color: #00796b; 
+  
+}
+text1:hover
+{
+    background-color: white;
+    color: #00796b; 
+     border-radius: 15px;
+}
+.name
+{
+    background-color:#18ffff ;
+}
+.me
+{
+    background-color: green;
+}
+
