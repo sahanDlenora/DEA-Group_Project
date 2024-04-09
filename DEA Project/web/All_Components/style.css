@@ -2,6 +2,12 @@
 {
     background-color: #00796b;
 }
+.navbar .nav-item:hover .nav-link
+{
+    background-color: white;
+    color: #00796b;
+    border-radius: 15px;
+}
 .me-4:hover 
 {
     background-color: white;

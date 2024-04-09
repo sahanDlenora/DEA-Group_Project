@@ -1,4 +1,3 @@
-
 package net.javaguides.registration.controller;
 
 import java.io.IOException;
@@ -18,7 +17,7 @@ import net.javaguides.registration.model.Login;
  */
 @WebServlet(name = "LoginServlet", urlPatterns = {"/LoginServlet"})
 public class LoginServlet extends HttpServlet {
-    
+
     private static final long serialVersionUID = 1L;
     private LoginDao loginDao;
 
@@ -43,7 +42,7 @@ public class LoginServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet LoginServlet</title>");            
+            out.println("<title>Servlet LoginServlet</title>");
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet LoginServlet at " + request.getContextPath() + "</h1>");
@@ -79,30 +78,34 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         //processRequest(request, response);
-        
+
         String email = request.getParameter("email");
         String password = request.getParameter("password");
-        
+
         Login login = new Login();
-        
+
         login.setEmail(email);
         login.setPassword(password);
 
-        try {
-            if (loginDao.validate(login)) {
-                //HttpSession session = request.getSession();
-                // session.setAttribute("username",username);
-                response.sendRedirect("loginsuccess.jsp");
-            } else {
-                //HttpSession session = request.getSession();
-                //session.setAttribute("user", username);
-                //response.sendRedirect("login.jsp");
-                response.sendRedirect("loginfailed.jsp");
+        if ("admin@gmail.com".equals(email) && "admin".equals(password)) {
+            response.sendRedirect("admin/home.jsp");
+        } else {
+            try {
+                if (loginDao.validate(login)) {
+                    //HttpSession session = request.getSession();
+                    // session.setAttribute("username",username);
+                    response.sendRedirect("loginsuccess.jsp");
+                } else {
+                    //HttpSession session = request.getSession();
+                    //session.setAttribute("user", username);
+                    //response.sendRedirect("login.jsp");
+                    response.sendRedirect("loginfailed.jsp");
+                }
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
             }
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
         }
-        
+
     }
 
     /**
@@ -110,5 +113,4 @@ public class LoginServlet extends HttpServlet {
      *
      * @return a String containing servlet description
      */
-
 }
