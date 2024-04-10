@@ -19,7 +19,7 @@
             
     </head>
     <body style="background-color: #98FB98;">
-        <%@include file="navbar.jsp" %>
+        <%@include file="../All_Components/navbar.jsp" %>
 
         <div class="container">
             <div class="row p-5">
@@ -75,6 +75,6 @@
                     </div>
               
 
-        <%@include file="footer.jsp" %>
+        <%@include file="../All_Components/footer.jsp" %>
     </body>
 </html>

@@ -1,0 +1,62 @@
+<%@page import="net.javaguides.registration.controller.DbConnect"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.Connection"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Admin : All Items</title>
+        <%@include file="../All_Components/allCss.jsp" %>
+    </head>
+    <body>
+
+        <h3 class="text-center">Hello Admin</h3>
+
+        <table class="table table-striped">
+            <thead class="bg-primary text-white">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Action</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+                <%
+                    Connection conn = DbConnect.getConn();
+
+                    PreparedStatement ps = conn.prepareStatement("select * from item_details");
+                    ResultSet rs = ps.executeQuery();
+                    while (rs.next()) {
+                %>
+                <tr>
+                    <th scope="row"><%= rs.getInt("Id") %></th>
+                    <td><img alt="" src="imgs/<%=rs.getString("img_name")%>" width="100px" height="50px"></td>
+                    <td><%= rs.getString("Iname") %></td>
+                    <td><%= rs.getDouble("Iprice") %></td>
+                    <td><%= rs.getString("Icategory") %></td>
+                    <td><%= rs.getString("Istatus") %></td>
+                    <td>
+                        <a href="#" class="btn btn-primary">Edit</a>
+                        <a href="#" class="btn btn-danger">Delete</a>
+                    </td>
+                </tr>
+                <% }
+                %>
+
+                
+
+            </tbody>
+        </table>
+
+
+        <%@include file="../All_Components/footer.jsp" %>
+    </body>
+</html>

@@ -1,3 +1,31 @@
-h1{
-    color: red;
+.bg-custom
+{
+    background-color: #00796b;
 }
+.navbar .nav-item:hover .nav-link
+{
+    background-color: white;
+    color: #00796b;
+    border-radius: 15px;
+}
+.me-4:hover 
+{
+    background-color: white;
+   color: #00796b; 
+  
+}
+text1:hover
+{
+    background-color: white;
+    color: #00796b; 
+     border-radius: 15px;
+}
+.name
+{
+    background-color:#18ffff ;
+}
+.me
+{
+    background-color: green;
+}
+
