@@ -7,25 +7,22 @@ package net.javaguides.registration.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import net.javaguides.registration.dao.UserDao;
-import net.javaguides.registration.model.User;
+import javax.servlet.http.HttpSession;
+import net.javaguides.registration.dao.RegisterDao;
+import net.javaguides.registration.model.Register;
 
 /**
  *
- * @author user
+ * @author User
  */
-@WebServlet(name = "UserServlet", urlPatterns = {"/UserServlet"})
-public class UserServlet extends HttpServlet {
-    
-    private UserDao userDao = new UserDao();
+@WebServlet(name = "RegisterServlet", urlPatterns = {"/RegisterServlet"})
+public class RegisterServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -44,10 +41,10 @@ public class UserServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet UserServlet</title>");            
+            out.println("<title>Servlet RegisterServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet UserServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet RegisterServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -65,10 +62,7 @@ public class UserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //processRequest(request, response);
-        
-        RequestDispatcher dispatcher = request.getRequestDispatcher("register.jsp");
-        dispatcher.forward(request, response);
+        processRequest(request, response);
     }
 
     /**
@@ -82,27 +76,29 @@ public class UserServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //processRequest(request, response);
-        
         String name = request.getParameter("name");
         String email = request.getParameter("email");
-        String pnumber = request.getParameter("pnumber");
+        String phone = request.getParameter("phone");
         String password = request.getParameter("password");
        
-        User user = new User();
-        user.setName(name);
-        user.setEmail(email);
-        user.setPnumber(pnumber);
-        user.setPassword(password);
+        Register register = new Register(name,email,phone,password);
         
-        try {
-            userDao.registerUser(user);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+        RegisterDao rDao = new RegisterDao();
+        
+        if(rDao.validate(register)) {
+            register.setName(name);
+            register.setEmail(email);
+ 
+            HttpSession session = request.getSession();
+            session.setAttribute("err-msg", "Alredy used username or password");
+            response.sendRedirect("register.jsp");
+            
+        }else {
+            String result = rDao.insert(register);
+            HttpSession session = request.getSession();
+            session.setAttribute("reg-msg", result);
+            response.sendRedirect("register.jsp");
         }
-        
-        RequestDispatcher dispatcher = request.getRequestDispatcher("userDetails.jsp");
-        dispatcher.forward(request, response);
         
     }
 

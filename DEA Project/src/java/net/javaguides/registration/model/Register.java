@@ -1,10 +1,23 @@
 package net.javaguides.registration.model;
 
-public class User {
+public class Register {
     private String name;
     private String email;
-    private String pnumber;
+    private String phone;
     private String password;
+    
+    public Register() {
+        super();
+    }
+
+    public Register(String name, String email, String phone, String password) {
+        super();
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+        this.password = password;
+    }
+    
 
     public String getName() {
         return name;
@@ -22,12 +35,12 @@ public class User {
         this.email = email;
     }
 
-    public String getPnumber() {
-        return pnumber;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setPnumber(String pnumber) {
-        this.pnumber = pnumber;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getPassword() {
