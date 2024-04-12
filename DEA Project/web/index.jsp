@@ -4,7 +4,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Egri:Index</title>
-        <%@include file="all_component/allCss.jsp" %>
+        <%@include file="All_Components/allCss.jsp" %>
         <style type="text/css">
             .back-img{
                 background:url("img/C.jpg");
@@ -21,7 +21,7 @@
    
     <body style="background-color:#f7f7f7">
        
-        <%@include file="all_component/navbar.jsp"%>
+        <%@include file="All_Components/navbar.jsp"%>
         <div class="container-fluid back-img">
             <h2  class="text-center text-danger"><i class="fa fa-leaf" aria-hidden="true"></i>E-agri Management system</h2>
         </div>
