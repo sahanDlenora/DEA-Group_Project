@@ -10,11 +10,7 @@
     </head>
     <body style="background-color: #f0f1f2">
         <%@include file="All_Components/navbar.jsp" %>
-        
-        <%
-            Connection conn = DbConnect.getConn();
-            out.println(conn);
-        %>
+       
 
         <div class="container p-2">
             <div class="row">
@@ -28,7 +24,7 @@
                             String regMsg = (String)session.getAttribute("reg-msg");
                             if(regMsg != null)
                             {%>
-                                <div class="alert alert-success" role="alert"><%=regMsg%></div>                            
+                            <div class="alert alert-success" role="alert"><%=regMsg%> Login <a href="login.jsp" class="">Click Here</a></div>                            
                             <%
                                 session.removeAttribute("reg-msg");
                                 }
@@ -46,7 +42,7 @@
                         <div class="card-body">
                             <form action="RegisterServlet" method="post">
                                 <div class="mb-3">
-                                    <label for="exampleInputEmail1" class="form-label">Enter Full Name : </label>
+                                    <label for="exampleInputEmail1" class="form-label">Username : </label>
                                     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required="required" name="name">
                                 </div>
                                 <div class="mb-3">

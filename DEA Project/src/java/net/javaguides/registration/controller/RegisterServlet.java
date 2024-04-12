@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import net.javaguides.registration.dao.RegisterDao;
 import net.javaguides.registration.model.Register;
+import static org.apache.tomcat.jni.Buffer.address;
 
 /**
  *

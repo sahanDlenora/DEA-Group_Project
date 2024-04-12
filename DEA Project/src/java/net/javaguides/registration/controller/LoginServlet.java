@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package net.javaguides.registration.controller;
 
 import java.io.IOException;
@@ -13,17 +18,10 @@ import net.javaguides.registration.model.Login;
 
 /**
  *
- * @author user
+ * @author User
  */
 @WebServlet(name = "LoginServlet", urlPatterns = {"/LoginServlet"})
 public class LoginServlet extends HttpServlet {
-
-    private static final long serialVersionUID = 1L;
-    private LoginDao loginDao;
-
-    public void init() {
-        loginDao = new LoginDao();
-    }
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -42,7 +40,7 @@ public class LoginServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet LoginServlet</title>");
+            out.println("<title>Servlet LoginServlet</title>");            
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet LoginServlet at " + request.getContextPath() + "</h1>");
@@ -63,7 +61,7 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //processRequest(request, response);
+        processRequest(request, response);
     }
 
     /**
@@ -77,35 +75,22 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //processRequest(request, response);
-
         String email = request.getParameter("email");
         String password = request.getParameter("password");
-
-        Login login = new Login();
-
-        login.setEmail(email);
-        login.setPassword(password);
-
-        if ("admin@gmail.com".equals(email) && "admin".equals(password)) {
-            response.sendRedirect("admin/home.jsp");
-        } else {
-            try {
-                if (loginDao.validate(login)) {
-                    //HttpSession session = request.getSession();
-                    // session.setAttribute("username",username);
-                    response.sendRedirect("loginsuccess.jsp");
-                } else {
-                    //HttpSession session = request.getSession();
-                    //session.setAttribute("user", username);
-                    //response.sendRedirect("login.jsp");
-                    response.sendRedirect("loginfailed.jsp");
-                }
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
-            }
+        
+        LoginDao dao = new LoginDao();
+        Login login = dao.getLogin(email,password);
+        
+        if(login != null) {
+            HttpSession session = request.getSession();
+            session.setAttribute("user-ob", login);
+            response.sendRedirect("home.jsp");
         }
-
+        else {
+            HttpSession session = request.getSession();
+            session.setAttribute("error-msg", "Invalid email or password");
+            response.sendRedirect("login.jsp");
+        }
     }
 
     /**
@@ -113,4 +98,9 @@ public class LoginServlet extends HttpServlet {
      *
      * @return a String containing servlet description
      */
+    @Override
+    public String getServletInfo() {
+        return "Short description";
+    }// </editor-fold>
+
 }

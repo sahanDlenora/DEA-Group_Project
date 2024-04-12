@@ -15,7 +15,7 @@ public class RegisterDao {
         
         Connection conn= DbConnect.getConn();
         String result = "Registration successfully...";
-        String sql =  "insert into user(name,email,phone,password) values(?,?,?,?)";
+        String sql =  "insert into user(name,email,phone_number,password) values(?,?,?,?)";
         
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
