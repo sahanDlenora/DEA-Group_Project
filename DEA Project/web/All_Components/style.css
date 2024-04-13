@@ -1,33 +1,55 @@
-.bg-custom
-{
-    background-color: #00796b;
+.bg-custom {
+    background-color: #00796b     ;
 }
-.navbar .nav-item:hover .nav-link
-{
-    background-color: white;
+.navbar .nav-item .nav-link {
+    font-size: 16px;
+}
+.navbar .nav-item:hover .nav-link {
+    background-color: #f1f8e9;
     color: #00796b;
-    border-radius: 15px;
+    border-radius: 10px;
 }
-.me-4:hover 
-{
-    background-color: white;
-   color: #00796b; 
-  
+.bg-nav {
+    background-color: #f1f8e9     ;
 }
-text1:hover
-{
-    background-color: white;
-    color: #00796b; 
-     border-radius: 15px;
+.btn-custom {
+    background-color: #1e88e5         ;
+    color: white;
 }
+.btn-custom:hover {
+    background-color: #1976d2  ;
+    color: white;
+}
+.btn-nav {
+    background-color: #f1f8e9     ;
+}
+.btn-nav:hover {
+    background-color: #dee3d8     ;
+}
+.btn-lo {
+    background-color: #00c853     ;
+    color: white;
+}
+.btn-lo:hover {
+    background-color: #0bb351  ;
+    color: white;
+}
+.text-logo {
+    color: #00c853  ;
+}
+.text-logo-icon {
+    color: #00796b ;
+    font-size: 35px;
+}
+.t {
+    font-weight: bold;
+}
+
 .name
 {
     background-color:#18ffff ;
 }
-.me
-{
-    background-color: green;
-}
+
 .c-header {
     background: #e1f5fe  ; 
 }
