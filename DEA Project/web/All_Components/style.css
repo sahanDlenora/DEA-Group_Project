@@ -51,6 +51,43 @@
 }
 
 .c-header {
-    background: #e1f5fe  ; 
+    background: #a5d9f0; 
+}
+.foo {
+    background-color: #28524d      ;
+}
+.t-footer {
+    font-weight: bold;
+}
+.foo-icon i{
+    padding: 0.5rem;
+    background: #22302f  ;
+    color: #00c853;
+    margin: 0 0.5rem;
+    border-radius: 50%;
+}
+.foo-icon i:hover{
+    background: #00c853;
+    color: white;
+}
+.list-unstyled.foo-icon {
+            justify-content: center;
+}
+.para {
+    font-weight: bold;
+    color: #f5f5f5 ;
+}
+.foo-title {
+    color: #00c853;
+}
+.foo-title a {
+    color: white;
+}
+.foo-title a:hover {
+    color: #bdbdbd ;
+}
+.foo-last {
+    color: #c0d1d0;
+    border: none;
 }
 

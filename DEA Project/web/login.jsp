@@ -6,11 +6,11 @@
         <title>JSP Page</title>
         <%@include file="All_Components/allCss.jsp" %>
     </head>
-    <body style="background-color: #f0f1f2">
+    <body style="background-color: #f1f8e9">
         <%@include file="All_Components/navbar.jsp" %>
 
-        <div class="container">
-            <div class="row mt-2">
+        <div class="container p-2">
+            <div class="row">
                 <div class="col-md-4 offset-md-4">
                     <div class="card">
                         <div class="card-header text-center c-header">

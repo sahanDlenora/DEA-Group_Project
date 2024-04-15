@@ -8,7 +8,7 @@
         <title>JSP Page</title>
         <%@include file="All_Components/allCss.jsp" %>
     </head>
-    <body style="background-color: #f0f1f2">
+    <body style="background-color: #f1f8e9">
         <%@include file="All_Components/navbar.jsp" %>
        
 
