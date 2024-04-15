@@ -1,7 +1,7 @@
 <%-- 
     Document   : aboutUs
-    Created on : Apr 15, 2024, 12:24:24 PM
-    Author     : user
+    Created on : Apr 15, 2024, 3:54:02 PM
+    Author     : ASUS_RSA
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -84,6 +84,7 @@
             } 
         </style>
     </head>
+    
     <body>
      <section class="about">
             <div class="main">
@@ -104,3 +105,4 @@
         
     </body>
 </html>
+
