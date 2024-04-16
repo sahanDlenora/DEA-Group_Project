@@ -3,59 +3,297 @@
 <%@page import="net.javaguides.registration.dao.ItemDao"%>
 <%@page import="net.javaguides.registration.controller.DbConnect"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
-<%
-    ItemDao pd = new ItemDao(DbConnect.getConn());
-    List<Item> items = pd.getAllItem();
-
-%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Egri:Index</title>
         <%@include file="All_Components/allCss.jsp" %>
-        <style type="text/css">
-            .back-img{
-                background:url("images/g.jpg");
-                height: 50vh;
-                width: 100%;
-                background-size: cover;
-                background-repeat: no-repeat;
-            }
-            .crd-ho:hover{
-                background-color: #fcf7f7; 
-            }
-        </style>
     </head>
 
-    <body style="background-color:#f7f7f7">
+    <body style="background-color:#f1f8e9">
 
         <%@include file="All_Components/navbar.jsp"%>
-
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block " src="images/u.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block" src="images/j.jpg" alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block" src="images/p.jpg" alt="Third slide">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+            </a>
+        </div>
+         <!--start recent item-->    
         <div class="container">
-            <div class="card-header my-3">All Products</div>
-            <div class="row">
-                <%                    if (!items.isEmpty()) {
-                        for (Item i : items) {%>
-                <div class="col-md-3 my-3">
-                    <div class="card w-100" style = "width: 18rem;"> <img src = "admin/imgs/<%=i.getImage() %>" class="card-img-top" alt = "..." width="200px" height="150px"> 
-                        <div class="card-body">
-                            <h5 class="card-title"><%= i.getName() %></h5>
-                            <h6 class="price">Price: $<%= i.getPrice()%></h6> 
-                            <h6 class="category">Category:<%= i.getCategory()%></h6> 
-                            <div class="mt-3 d-flex justify-content-between">
-                                    <a href = "#" class="btn btn-primary">Add to cart</a> 
-                                    <a href = "#" class="btn btn-primary">Buy Now</a> </div> 
-                                    </div>
-                        </div> </div>
-                                    <%}
-                                        }
-                                    %>
-
+            <h3 class="text-center p-2 category-title">Recent Item</h3>
+            <div class="container my-3 text-center">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 ">
+                        <div class="card crd-ho">
+                            <div class="card-body text-center">
+                                <img src="images/dd.jpg" alt="" class="img-fluid card-img">
+                                <p class="card-para1">Item Name</p>
+                                <p class="card-para2">Price</p>
+                                <div class="d-flex flex-row justify-content-around">
+                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                    <a href="" class="btn btn-success btn-sm">View Details</a>
                                 </div>
+                            </div>
                         </div>
-
-
-                        </body>
-                        </html>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card crd-ho">
+                            <div class="card-body text-center">
+                                <img src="images/dd.jpg" alt="" class="img-fluid card-img">
+                                <p class="card-para1">Item Name</p>
+                                <p class="card-para2">Price</p>
+                                <div class="d-flex flex-row justify-content-around">
+                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                    <a href="" class="btn btn-success btn-sm">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card crd-ho">
+                            <div class="card-body text-center">
+                                <img src="images/dd.jpg" alt="" class="img-fluid card-img">
+                                <p class="card-para1">Item Name</p>
+                                <p class="card-para2">Price</p>
+                                <div class="d-flex flex-row justify-content-around">
+                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                    <a href="" class="btn btn-success btn-sm">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card crd-ho">
+                            <div class="card-body text-center">
+                                <img src="images/dd.jpg" alt="" class="img-fluid card-img">
+                                <p class="card-para1">Item Name</p>
+                                <p class="card-para2">Price</p>
+                                <div class="d-flex flex-row justify-content-around">
+                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                    <a href="" class="btn btn-success btn-sm">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-1">
+                    <a href="" class="btn btn-danger btn-sm text-white ">View All</a>
+                </div>
+            </div>         
+        </div>
+         <!--end recent item--> 
+         <hr>
+         <!--start plants-->    
+        <div class="container">
+            <h3 class="text-center category-title">Plants</h3>
+            <div class="container my-3 text-center">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card crd-ho">
+                            <div class="card-body text-center">
+                                <img src="images/dd.jpg" alt="" class="img-fluid card-img">
+                                <p class="card-para1">Item Name</p>
+                                <p class="card-para2">Price</p>
+                                <div class="d-flex flex-row justify-content-around">
+                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                    <a href="" class="btn btn-success btn-sm">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card crd-ho">
+                            <div class="card-body text-center">
+                                <img src="images/dd.jpg" alt="" class="img-fluid card-img">
+                                <p class="card-para1">Item Name</p>
+                                <p class="card-para2">Price</p>
+                                <div class="d-flex flex-row justify-content-around">
+                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                    <a href="" class="btn btn-success btn-sm">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card crd-ho">
+                            <div class="card-body text-center">
+                                <img src="images/dd.jpg" alt="" class="img-fluid card-img">
+                                <p class="card-para1">Item Name</p>
+                                <p class="card-para2">Price</p>
+                                <div class="d-flex flex-row justify-content-around">
+                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                    <a href="" class="btn btn-success btn-sm">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card crd-ho">
+                            <div class="card-body text-center">
+                                <img src="images/dd.jpg" alt="" class="img-fluid card-img">
+                                <p class="card-para1">Item Name</p>
+                                <p class="card-para2">Price</p>
+                                <div class="d-flex flex-row justify-content-around">
+                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                    <a href="" class="btn btn-success btn-sm">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-1">
+                    <a href="" class="btn btn-danger btn-sm text-white ">View All</a>
+                </div>
+            </div>         
+        </div>
+         <!--end plants--> 
+         <hr>
+         <!--start seeds-->    
+        <div class="container">
+            <h3 class="text-center category-title">Seeds</h3>
+            <div class="container my-3 text-center">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card crd-ho">
+                            <div class="card-body text-center">
+                                <img src="images/dd.jpg" alt="" class="img-fluid card-img">
+                                <p class="card-para1">Item Name</p>
+                                <p class="card-para2">Price</p>
+                                <div class="d-flex flex-row justify-content-around">
+                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                    <a href="" class="btn btn-success btn-sm">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card crd-ho">
+                            <div class="card-body text-center">
+                                <img src="images/dd.jpg" alt="" class="img-fluid card-img">
+                                <p class="card-para1">Item Name</p>
+                                <p class="card-para2">Price</p>
+                                <div class="d-flex flex-row justify-content-around">
+                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                    <a href="" class="btn btn-success btn-sm">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card crd-ho">
+                            <div class="card-body text-center">
+                                <img src="images/dd.jpg" alt="" class="img-fluid card-img">
+                                <p class="card-para1">Item Name</p>
+                                <p class="card-para2">Price</p>
+                                <div class="d-flex flex-row justify-content-around">
+                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                    <a href="" class="btn btn-success btn-sm">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card crd-ho">
+                            <div class="card-body text-center">
+                                <img src="images/dd.jpg" alt="" class="img-fluid card-img">
+                                <p class="card-para1">Item Name</p>
+                                <p class="card-para2">Price</p>
+                                <div class="d-flex flex-row justify-content-around">
+                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                    <a href="" class="btn btn-success btn-sm">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-1">
+                    <a href="" class="btn btn-danger btn-sm text-white ">View All</a>
+                </div>
+            </div>         
+        </div>
+         <!--end seeds--> 
+         <hr>
+         <!--start fertilizer-->    
+        <div class="container">
+            <h3 class="text-center category-title">Fertilizer</h3>
+            <div class="container my-3 text-center">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card crd-ho">
+                            <div class="card-body text-center">
+                                <img src="images/dd.jpg" alt="" class="img-fluid card-img">
+                                <p class="card-para1">Item Name</p>
+                                <p class="card-para2">Price</p>
+                                <div class="d-flex flex-row justify-content-around">
+                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                    <a href="" class="btn btn-success btn-sm">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card crd-ho">
+                            <div class="card-body text-center">
+                                <img src="images/dd.jpg" alt="" class="img-fluid card-img">
+                                <p class="card-para1">Item Name</p>
+                                <p class="card-para2">Price</p>
+                                <div class="d-flex flex-row justify-content-around">
+                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                    <a href="" class="btn btn-success btn-sm">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card crd-ho">
+                            <div class="card-body text-center">
+                                <img src="images/dd.jpg" alt="" class="img-fluid card-img">
+                                <p class="card-para1">Item Name</p>
+                                <p class="card-para2">Price</p>
+                                <div class="d-flex flex-row justify-content-around">
+                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                    <a href="" class="btn btn-success btn-sm">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card crd-ho">
+                            <div class="card-body text-center">
+                                <img src="images/dd.jpg" alt="" class="img-fluid card-img">
+                                <p class="card-para1">Item Name</p>
+                                <p class="card-para2">Price</p>
+                                <div class="d-flex flex-row justify-content-around">
+                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                    <a href="" class="btn btn-success btn-sm">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-1">
+                    <a href="" class="btn btn-danger btn-sm text-white ">View All</a>
+                </div>
+            </div>         
+        </div>
+         <!--end fertilizer--> 
+        <%@include file="All_Components/footer.jsp" %> 
+    </body>
+</html>
