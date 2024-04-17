@@ -29,10 +29,10 @@
       <li class="nav-item active">
         <a class="nav-link" href="index.jsp"><i class="fa-solid fa-house"></i> Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item active"><a class="nav-link" href="#"><i class="fa-solid fa-tree"></i> Recent Items</a></li>
-      <li class="nav-item active"><a class="nav-link" href="#"><i class="fa-solid fa-seedling"></i> Plants</a></li>
-      <li class="nav-item active"><a class="nav-link" href="#"><i class="fa-solid fa-bowling-ball"></i> Seeds</a></li>
-      <li class="nav-item active"><a class="nav-link" href="#"><i class="fa-solid fa-box"></i> Fertilizer</a></li>
+      <li class="nav-item active"><a class="nav-link" href="recent_items.jsp"><i class="fa-solid fa-tree"></i> Recent Items</a></li>
+      <li class="nav-item active"><a class="nav-link" href="plants.jsp"><i class="fa-solid fa-seedling"></i> Plants</a></li>
+      <li class="nav-item active"><a class="nav-link" href="seeds.jsp"><i class="fa-solid fa-bowling-ball"></i> Seeds</a></li>
+      <li class="nav-item active"><a class="nav-link" href="fertilizer.jsp"><i class="fa-solid fa-box"></i> Fertilizer</a></li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <button class="btn btn-nav my-2 my-sm-0" type="submit"><i class="fa-solid fa-user-group"></i> About Us</button>

@@ -37,7 +37,7 @@
         </div>
          <!--start recent item-->    
         <div class="container">
-            <h3 class="text-center p-2 category-title">Recent Item</h3>
+            <h3 class="text-center p-2 category-title">Recent Items</h3>
             <div class="container my-3 text-center">
                 <div class="row">
                     <div class="col-lg-3 col-md-6 ">
@@ -94,7 +94,7 @@
                     </div>
                 </div>
                 <div class="text-center mt-1">
-                    <a href="" class="btn btn-danger btn-sm text-white ">View All</a>
+                    <a href="recent_items.jsp" class="btn btn-danger btn-sm text-white ">View All</a>
                 </div>
             </div>         
         </div>
@@ -159,7 +159,7 @@
                     </div>
                 </div>
                 <div class="text-center mt-1">
-                    <a href="" class="btn btn-danger btn-sm text-white ">View All</a>
+                    <a href="plants.jsp" class="btn btn-danger btn-sm text-white ">View All</a>
                 </div>
             </div>         
         </div>
@@ -224,7 +224,7 @@
                     </div>
                 </div>
                 <div class="text-center mt-1">
-                    <a href="" class="btn btn-danger btn-sm text-white ">View All</a>
+                    <a href="seeds.jsp" class="btn btn-danger btn-sm text-white ">View All</a>
                 </div>
             </div>         
         </div>
@@ -289,7 +289,7 @@
                     </div>
                 </div>
                 <div class="text-center mt-1">
-                    <a href="" class="btn btn-danger btn-sm text-white ">View All</a>
+                    <a href="fertilizer.jsp" class="btn btn-danger btn-sm text-white ">View All</a>
                 </div>
             </div>         
         </div>
