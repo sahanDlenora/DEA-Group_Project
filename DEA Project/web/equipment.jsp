@@ -19,7 +19,7 @@
         <%@include file="All_Components/navbar.jsp"%>
         
         <div class="container">
-            <h3 class="text-center p-2 category-title">Equipment</h3>
+            <h3 class="text-center p-2 category-title">Equipments</h3>
             <div class="container my-3 text-center">
                 <div class="row">
                     <% 
