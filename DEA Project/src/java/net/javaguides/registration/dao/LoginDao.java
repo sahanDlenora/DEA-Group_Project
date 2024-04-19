@@ -19,7 +19,7 @@ public class LoginDao {
             
             ResultSet rs = pst.executeQuery();
             if(rs.next()){
-                lo = new Login(rs.getString(1),rs.getString(2));
+                lo = new Login(rs.getString(1),rs.getString(2),rs.getString(3));
             }
             
         } catch (Exception e) {
@@ -28,4 +28,5 @@ public class LoginDao {
         
         return lo;
     }
+
 }

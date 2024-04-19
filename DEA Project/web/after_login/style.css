@@ -41,7 +41,7 @@
 .btn-lo {
     background-color: #00c853     ;
     color: white;
-    font-weight:  600;
+    font-weight: 600;
 }
 .btn-lo:hover {
     background-color: #0bb351  ;
@@ -84,7 +84,7 @@
     color: white;
 }
 .list-unstyled.foo-icon {
-    justify-content: center;
+            justify-content: center;
 }
 .para {
     font-weight: bold;
@@ -130,10 +130,9 @@
 .crd-ho:hover {
     background-color: #e1f2f5;
 }
-<<<<<<< Updated upstream
 .nav-icon-after i {
     padding: 7.4px;
-    background: #18494d ;
+    background: #18494d  ;
     color: red;
     margin: 1 0.5rem;
     border-radius: 50%;
@@ -143,7 +142,5 @@
     background: red;
     color: white;
 }
-=======
 
->>>>>>> Stashed changes
 

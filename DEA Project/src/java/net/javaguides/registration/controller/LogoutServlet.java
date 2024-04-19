@@ -13,16 +13,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import net.javaguides.registration.dao.LoginDao;
-import net.javaguides.registration.model.Login;
-import static org.apache.tomcat.jni.Lock.name;
 
 /**
  *
  * @author User
  */
-@WebServlet(name = "LoginServlet", urlPatterns = {"/LoginServlet"})
-public class LoginServlet extends HttpServlet {
+@WebServlet(name = "LogoutServlet", urlPatterns = {"/LogoutServlet"})
+public class LogoutServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -41,10 +38,10 @@ public class LoginServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet LoginServlet</title>");            
+            out.println("<title>Servlet LogoutServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet LoginServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet LogoutServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -62,7 +59,12 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        HttpSession session = request.getSession();
+        session.removeAttribute("user-ob");
+        
+        HttpSession session2 = request.getSession();
+        session.setAttribute("logout-msg", "Logout Successfully...");
+        response.sendRedirect("login.jsp");
     }
 
     /**
@@ -76,22 +78,7 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String email = request.getParameter("email");
-        String password = request.getParameter("password");
-        
-        LoginDao dao = new LoginDao();
-        Login login = dao.getLogin(email,password);
-        
-        if(login != null) {
-            HttpSession session = request.getSession();
-            session.setAttribute("user-ob", login);
-            response.sendRedirect("after_login/home.jsp");
-        }
-        else {
-            HttpSession session = request.getSession();
-            session.setAttribute("error-msg", "Invalid email or password");
-            response.sendRedirect("login.jsp");
-        }
+        processRequest(request, response);
     }
 
     /**

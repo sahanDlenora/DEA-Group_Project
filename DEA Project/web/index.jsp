@@ -23,7 +23,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Egri:Index</title>
+        <title>index-page</title>
         <%@include file="All_Components/allCss.jsp" %>
     </head>
 
