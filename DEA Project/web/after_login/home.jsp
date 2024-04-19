@@ -3,7 +3,6 @@
 <%@page import="net.javaguides.registration.dao.ItemDao"%>
 <%@page import="net.javaguides.registration.controller.DbConnect"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<<<<<<< Updated upstream
 <%
     ItemDao idP=new ItemDao(DbConnect.getConn());
     List<Item> itemsP = idP.getPlantItemHome();
@@ -20,28 +19,17 @@
     %>
 
 
-=======
->>>>>>> Stashed changes
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<<<<<<< Updated upstream
         <title>home-page</title>
         <%@include file="allCss.jsp" %>
-=======
-        <title>index-page</title>
-        <%@include file="../All_Components/allCss.jsp" %>
->>>>>>> Stashed changes
     </head>
 
     <body style="background-color:#f1f8e9">
 
-<<<<<<< Updated upstream
         <%@include file="../All_Components/navbar_after.jsp"%>
-=======
-        <%@include file="after_login/../All_Components/navbar_after.jsp"%>
->>>>>>> Stashed changes
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -122,27 +110,18 @@
                     </div>
                 </div>
                 <div class="text-center mt-1">
-<<<<<<< Updated upstream
                     <a href="recent_items_after.jsp" class="btn btn-danger btn-sm text-white ">View All</a>
-=======
-                    <a href="recent_items.jsp" class="btn btn-danger btn-sm text-white ">View All</a>
->>>>>>> Stashed changes
                 </div>
             </div>         
         </div>
          <!--end recent item--> 
          <hr>
-<<<<<<< Updated upstream
          <!--start plants-->   
          
-=======
-         <!--start plants-->    
->>>>>>> Stashed changes
         <div class="container">
             <h3 class="text-center category-title">Plants</h3>
             <div class="container my-3 text-center">
                 <div class="row">
-<<<<<<< Updated upstream
                     <% 
                         if (!itemsP.isEmpty()) {
                         for (Item i : itemsP) {%>
@@ -153,13 +132,6 @@
                                 <img src="../admin/imgs/<%=i.getImage() %>" alt="" class="img-fluid card-img">
                                 <p class="card-para1"><%= i.getName() %></p>
                                 <p class="card-para2">Price : <%= i.getPrice() %></p>
-=======
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card crd-ho">
-                            <div class="card-body text-center">
-                                <img src="../images/dd.jpg" alt="" class="img-fluid card-img">
-                                <p class="card-para1">Item Name</p>
-                                <p class="card-para2">Price</p>
                                 <div class="d-flex flex-row justify-content-around">
                                     <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
                                     <a href="" class="btn btn-success btn-sm">View Details</a>
@@ -167,47 +139,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card crd-ho">
-                            <div class="card-body text-center">
-                                <img src="../images/dd.jpg" alt="" class="img-fluid card-img">
-                                <p class="card-para1">Item Name</p>
-                                <p class="card-para2">Price</p>
-                                <div class="d-flex flex-row justify-content-around">
-                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
-                                    <a href="" class="btn btn-success btn-sm">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card crd-ho">
-                            <div class="card-body text-center">
-                                <img src="../images/dd.jpg" alt="" class="img-fluid card-img">
-                                <p class="card-para1">Item Name</p>
-                                <p class="card-para2">Price</p>
-                                <div class="d-flex flex-row justify-content-around">
-                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
-                                    <a href="" class="btn btn-success btn-sm">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card crd-ho">
-                            <div class="card-body text-center">
-                                <img src="../images/dd.jpg" alt="" class="img-fluid card-img">
-                                <p class="card-para1">Item Name</p>
-                                <p class="card-para2">Price</p>
->>>>>>> Stashed changes
-                                <div class="d-flex flex-row justify-content-around">
-                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
-                                    <a href="" class="btn btn-success btn-sm">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-<<<<<<< Updated upstream
                         
                         <%}
                         }
@@ -216,16 +147,10 @@
                 </div>
                 <div class="text-center mt-1">
                     <a href="plants_after.jsp" class="btn btn-danger btn-sm text-white ">View All</a>
-=======
-                </div>
-                <div class="text-center mt-1">
-                    <a href="plants.jsp" class="btn btn-danger btn-sm text-white ">View All</a>
->>>>>>> Stashed changes
                 </div>
             </div>         
         </div>
          <!--end plants--> 
-<<<<<<< Updated upstream
          
          <hr>
          
@@ -247,19 +172,6 @@
                                 <img src="../admin/imgs/<%=i.getImage() %>" alt="" class="img-fluid card-img">
                                 <p class="card-para1"><%= i.getName() %></p>
                                 <p class="card-para2">Price : <%= i.getPrice() %></p>
-=======
-         <hr>
-         <!--start seeds-->    
-        <div class="container">
-            <h3 class="text-center category-title">Seeds</h3>
-            <div class="container my-3 text-center">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card crd-ho">
-                            <div class="card-body text-center">
-                                <img src="../images/dd.jpg" alt="" class="img-fluid card-img">
-                                <p class="card-para1">Item Name</p>
-                                <p class="card-para2">Price</p>
                                 <div class="d-flex flex-row justify-content-around">
                                     <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
                                     <a href="" class="btn btn-success btn-sm">View Details</a>
@@ -267,47 +179,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card crd-ho">
-                            <div class="card-body text-center">
-                                <img src="../images/dd.jpg" alt="" class="img-fluid card-img">
-                                <p class="card-para1">Item Name</p>
-                                <p class="card-para2">Price</p>
-                                <div class="d-flex flex-row justify-content-around">
-                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
-                                    <a href="" class="btn btn-success btn-sm">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card crd-ho">
-                            <div class="card-body text-center">
-                                <img src="../images/dd.jpg" alt="" class="img-fluid card-img">
-                                <p class="card-para1">Item Name</p>
-                                <p class="card-para2">Price</p>
-                                <div class="d-flex flex-row justify-content-around">
-                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
-                                    <a href="" class="btn btn-success btn-sm">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card crd-ho">
-                            <div class="card-body text-center">
-                                <img src="../images/dd.jpg" alt="" class="img-fluid card-img">
-                                <p class="card-para1">Item Name</p>
-                                <p class="card-para2">Price</p>
->>>>>>> Stashed changes
-                                <div class="d-flex flex-row justify-content-around">
-                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
-                                    <a href="" class="btn btn-success btn-sm">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-<<<<<<< Updated upstream
                         
                         <%}
                         }
@@ -316,30 +187,19 @@
                 </div>
                 <div class="text-center mt-1">
                     <a href="seeds_after.jsp" class="btn btn-danger btn-sm text-white ">View All</a>
-=======
-                </div>
-                <div class="text-center mt-1">
-                    <a href="seeds.jsp" class="btn btn-danger btn-sm text-white ">View All</a>
->>>>>>> Stashed changes
                 </div>
             </div>         
         </div>
          <!--end seeds--> 
-<<<<<<< Updated upstream
          
          <hr>
          
          <!--start fertilizer-->    
          
-=======
-         <hr>
-         <!--start fertilizer-->    
->>>>>>> Stashed changes
         <div class="container">
             <h3 class="text-center category-title">Fertilizer</h3>
             <div class="container my-3 text-center">
                 <div class="row">
-<<<<<<< Updated upstream
                     <% 
                         if (!itemsF.isEmpty()) {
                         for (Item i : itemsF) {%>
@@ -350,13 +210,6 @@
                                 <img src="../admin/imgs/<%=i.getImage() %>" alt="" class="img-fluid card-img">
                                 <p class="card-para1"><%= i.getName() %></p>
                                 <p class="card-para2">Price : <%= i.getPrice() %></p>
-=======
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card crd-ho">
-                            <div class="card-body text-center">
-                                <img src="../images/dd.jpg" alt="" class="img-fluid card-img">
-                                <p class="card-para1">Item Name</p>
-                                <p class="card-para2">Price</p>
                                 <div class="d-flex flex-row justify-content-around">
                                     <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
                                     <a href="" class="btn btn-success btn-sm">View Details</a>
@@ -364,47 +217,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card crd-ho">
-                            <div class="card-body text-center">
-                                <img src="../images/dd.jpg" alt="" class="img-fluid card-img">
-                                <p class="card-para1">Item Name</p>
-                                <p class="card-para2">Price</p>
-                                <div class="d-flex flex-row justify-content-around">
-                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
-                                    <a href="" class="btn btn-success btn-sm">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card crd-ho">
-                            <div class="card-body text-center">
-                                <img src="../images/dd.jpg" alt="" class="img-fluid card-img">
-                                <p class="card-para1">Item Name</p>
-                                <p class="card-para2">Price</p>
-                                <div class="d-flex flex-row justify-content-around">
-                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
-                                    <a href="" class="btn btn-success btn-sm">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card crd-ho">
-                            <div class="card-body text-center">
-                                <img src="../images/dd.jpg" alt="" class="img-fluid card-img">
-                                <p class="card-para1">Item Name</p>
-                                <p class="card-para2">Price</p>
->>>>>>> Stashed changes
-                                <div class="d-flex flex-row justify-content-around">
-                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
-                                    <a href="" class="btn btn-success btn-sm">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-<<<<<<< Updated upstream
                     <%}
                         }
                         %>
@@ -412,19 +224,10 @@
                 </div>
                 <div class="text-center mt-1">
                     <a href="fertilizer_after.jsp" class="btn btn-danger btn-sm text-white ">View All</a>
-=======
-                </div>
-                <div class="text-center mt-1">
-                    <a href="fertilizer.jsp" class="btn btn-danger btn-sm text-white ">View All</a>
->>>>>>> Stashed changes
                 </div>
             </div>         
         </div>
          <!--end fertilizer--> 
-<<<<<<< Updated upstream
         <%@include file="../All_Components/footer_after.jsp" %> 
-=======
-        <%@include file="../All_Components/footer.jsp" %> 
->>>>>>> Stashed changes
     </body>
 </html>
