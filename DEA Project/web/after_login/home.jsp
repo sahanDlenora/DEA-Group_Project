@@ -17,6 +17,16 @@
     ItemDao idF=new ItemDao(DbConnect.getConn());
     List<Item> itemsF = idF.getFertilizerItemHome();
     %>
+    
+<%
+    ItemDao idR=new ItemDao(DbConnect.getConn());
+    List<Item> itemsR = idR.getRecentItemHome();
+    %>
+    
+<%
+    ItemDao idE=new ItemDao(DbConnect.getConn());
+    List<Item> itemsE = idE.getEquipmentItemHome();
+    %>
 
 
 <!DOCTYPE html>
@@ -56,12 +66,16 @@
             <h3 class="text-center p-2 category-title">Recent Items</h3>
             <div class="container my-3 text-center">
                 <div class="row">
+                    <% 
+                        if (!itemsR.isEmpty()) {
+                        for (Item i : itemsR) {%>
+                        
                     <div class="col-lg-3 col-md-6 ">
                         <div class="card crd-ho">
                             <div class="card-body text-center">
-                                <img src="../images/dd.jpg" alt="" class="img-fluid card-img">
-                                <p class="card-para1">Item Name</p>
-                                <p class="card-para2">Price</p>
+                                <img src="admin/imgs/<%=i.getImage() %>" alt="" class="img-fluid card-img">
+                                <p class="card-para1"><%= i.getName() %></p>
+                                <p class="card-para2">Price : <%= i.getPrice() %></p>
                                 <div class="d-flex flex-row justify-content-around">
                                     <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
                                     <a href="" class="btn btn-success btn-sm">View Details</a>
@@ -69,48 +83,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card crd-ho">
-                            <div class="card-body text-center">
-                                <img src="../images/dd.jpg" alt="" class="img-fluid card-img">
-                                <p class="card-para1">Item Name</p>
-                                <p class="card-para2">Price</p>
-                                <div class="d-flex flex-row justify-content-around">
-                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
-                                    <a href="" class="btn btn-success btn-sm">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card crd-ho">
-                            <div class="card-body text-center">
-                                <img src="../images/dd.jpg" alt="" class="img-fluid card-img">
-                                <p class="card-para1">Item Name</p>
-                                <p class="card-para2">Price</p>
-                                <div class="d-flex flex-row justify-content-around">
-                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
-                                    <a href="" class="btn btn-success btn-sm">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card crd-ho">
-                            <div class="card-body text-center">
-                                <img src="../images/dd.jpg" alt="" class="img-fluid card-img">
-                                <p class="card-para1">Item Name</p>
-                                <p class="card-para2">Price</p>
-                                <div class="d-flex flex-row justify-content-around">
-                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
-                                    <a href="" class="btn btn-success btn-sm">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        
+                        <%}
+                        }
+                        %>
+                    
                 </div>
                 <div class="text-center mt-1">
-                    <a href="recent_items_after.jsp" class="btn btn-danger btn-sm text-white ">View All</a>
+                    
                 </div>
             </div>         
         </div>
@@ -134,7 +114,7 @@
                                 <p class="card-para2">Price : <%= i.getPrice() %></p>
                                 <div class="d-flex flex-row justify-content-around">
                                     <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
-                                    <a href="" class="btn btn-success btn-sm">View Details</a>
+                                    <a href="view_items_after.jsp" class="btn btn-success btn-sm">View Details</a>
                                 </div>
                             </div>
                         </div>
@@ -174,7 +154,7 @@
                                 <p class="card-para2">Price : <%= i.getPrice() %></p>
                                 <div class="d-flex flex-row justify-content-around">
                                     <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
-                                    <a href="" class="btn btn-success btn-sm">View Details</a>
+                                    <a href="view_items_after.jsp" class="btn btn-success btn-sm">View Details</a>
                                 </div>
                             </div>
                         </div>
@@ -212,7 +192,7 @@
                                 <p class="card-para2">Price : <%= i.getPrice() %></p>
                                 <div class="d-flex flex-row justify-content-around">
                                     <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
-                                    <a href="" class="btn btn-success btn-sm">View Details</a>
+                                    <a href="view_items_after.jsp" class="btn btn-success btn-sm">View Details</a>
                                 </div>
                             </div>
                         </div>
@@ -228,6 +208,41 @@
             </div>         
         </div>
          <!--end fertilizer--> 
+         
+         <!--start Equipment-->    
+         
+        <div class="container">
+            <h3 class="text-center category-title">Equipment</h3>
+            <div class="container my-3 text-center">
+                <div class="row">
+                    <% 
+                        if (!itemsE.isEmpty()) {
+                        for (Item i : itemsE) {%>
+                        
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card crd-ho">
+                            <div class="card-body text-center">
+                                <img src="../admin/imgs/<%=i.getImage() %>" alt="" class="img-fluid card-img">
+                                <p class="card-para1"><%= i.getName() %></p>
+                                <p class="card-para2">Price : <%= i.getPrice() %></p>
+                                <div class="d-flex flex-row justify-content-around">
+                                    <a href="login.jsp" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                    <a href="view_items.jsp" class="btn btn-success btn-sm">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <%}
+                        }
+                        %>
+                        
+                </div>
+                <div class="text-center mt-1">
+                    <a href="equipment_after.jsp" class="btn btn-danger btn-sm text-white ">View All</a>
+                </div>
+            </div>         
+        </div>
+         <!--end Equipment-->
         <%@include file="../All_Components/footer_after.jsp" %> 
     </body>
 </html>

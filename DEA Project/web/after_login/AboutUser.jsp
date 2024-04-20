@@ -4,7 +4,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-<%@include file="All_Components/allCss.jsp" %>
+<%@include file="allCss.jsp" %>
 <style type="text/css">
 a{
 text-decoration: none;
@@ -16,12 +16,12 @@ a:hover{
 </style>
 }
 </head>
-<body style="background-color: #f7f7f7;">
+<body style="background-color: #f1f8e9;">
     
-<%@include file="All_Components/navbar.jsp"%>
+<%@include file="../All_Components/navbar_after.jsp"%>
 
     <div class="container">
-        <h3 class="text-center>Hello, Pabitra</h3>
+        <h3 class="text-center mt-2">Hello, <%=login1.getEmail()%></h3>
         <div class="row p-5">
             <div class="col-md-6">
                 <a href="">
@@ -30,7 +30,7 @@ a:hover{
                             <div class="text-primary">
                                 <i class="fas fa-book-open fa-3x"></i> 
                             </div>
-                            <h4>Sell Old Book</h4>
+                            <h4>Sell Items</h4>
                         </div>
                     </div>
                 </a>
@@ -41,7 +41,7 @@ a:hover{
                     <div class="card">
                         <div class="card-body text-center">
                             <div class="text-primary">
-                                <i class="fas fa-edit-open fa-3x"></i> 
+                                <i class="fa-solid fa-id-card fa-3x"></i> 
                             </div>
                             <h4>Login & Security (Edit Profile)</h4>
                         </div>
@@ -97,9 +97,7 @@ a:hover{
         </div>
     </div>
 
-          <%@include file="All_Components/footer.jsp" %> 
-        </div>
-</div>
+    <%@include file="../All_Components/footer_after.jsp" %> 
 <body>
 
 </body>

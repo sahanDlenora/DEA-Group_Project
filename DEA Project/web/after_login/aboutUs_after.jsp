@@ -1,16 +1,10 @@
-<%-- 
-    Document   : aboutUs
-    Created on : Apr 15, 2024, 3:54:02 PM
-    Author     : ASUS_RSA
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>AboutUs</title>
-        <%@include file="All_Components/allCss.jsp" %>
+        <%@include file="allCss.jsp" %>
         <style>
             *{
                 padding: 0;
@@ -87,10 +81,10 @@
     </head>
     
     <body style="background-color:#f1f8e9">
-      <%@include file="All_Components/navbar.jsp"%>
+      <%@include file="../All_Components/navbar_after.jsp"%>
         <section class="about">
             <div class="main">
-                <img src="veg3.jpg">
+                <img src="../veg3.jpg">
                     <div class="about-text">
                         <h1>Plant<span>Me</span></h1>
                         <p><b>"Welcome to PlantMe – Your premier destination for all things agricultural! At PlantMe, 
@@ -104,7 +98,7 @@
                     </div>
             </div>
         </section>    
-        <%@include file="All_Components/footer.jsp" %>
+        <%@include file="../All_Components/footer_after.jsp" %>
     </body>
 </html>
 

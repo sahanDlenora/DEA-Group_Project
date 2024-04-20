@@ -16,19 +16,19 @@
             <div class="col-md-2">
                 <ul class="list-unstyled foo-title">
                     <li class="fw-bold my-2">CATEGORY</li>
-                    <li><a href="" class="text-decoration-none">Plants</a></li>
-                    <li><a href="" class="text-decoration-none">Seeds</a></li>
-                    <li><a href="" class="text-decoration-none">Fertilizer</a></li>
-                    <li><a href="" class="text-decoration-none">More Items</a></li>
+                    <li><a href="plants.jsp" class="text-decoration-none">Plants</a></li>
+                    <li><a href="seeds.jsp" class="text-decoration-none">Seeds</a></li>
+                    <li><a href="fertilizer.jsp" class="text-decoration-none">Fertilizer</a></li>
+                    <li><a href="equipment.jsp" class="text-decoration-none">Equipment</a></li>
                 </ul>
             </div>
             <div class="col-md-2">
                 <ul class="list-unstyled foo-title">
                     <li class="fw-bold my-2">USEFULL LINKS</li>
-                    <li><a href="" class="text-decoration-none">Home</a></li>
-                    <li><a href="" class="text-decoration-none">About Us</a></li>
-                    <li><a href="" class="text-decoration-none">Login</a></li>
-                    <li><a href="" class="text-decoration-none">Register</a></li>
+                    <li><a href="index.jsp" class="text-decoration-none">Home</a></li>
+                    <li><a href="aboutUs.jsp" class="text-decoration-none">About Us</a></li>
+                    <li><a href="login.jsp" class="text-decoration-none">Login</a></li>
+                    <li><a href="register.jsp" class="text-decoration-none">Register</a></li>
                     
                 </ul>
             </div>

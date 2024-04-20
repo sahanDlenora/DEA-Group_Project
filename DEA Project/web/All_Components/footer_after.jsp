@@ -16,19 +16,19 @@
             <div class="col-md-2">
                 <ul class="list-unstyled foo-title">
                     <li class="fw-bold my-2">CATEGORY</li>
-                    <li><a href="" class="text-decoration-none">Plants</a></li>
-                    <li><a href="" class="text-decoration-none">Seeds</a></li>
-                    <li><a href="" class="text-decoration-none">Fertilizer</a></li>
-                    <li><a href="" class="text-decoration-none">More Items</a></li>
+                    <li><a href="plants_after.jsp" class="text-decoration-none">Plants</a></li>
+                    <li><a href="seeds_after.jsp" class="text-decoration-none">Seeds</a></li>
+                    <li><a href="fertilizer_after.jsp" class="text-decoration-none">Fertilizer</a></li>
+                    <li><a href="equipment_after.jsp" class="text-decoration-none">Equipments</a></li>
                 </ul>
             </div>
             <div class="col-md-2">
                 <ul class="list-unstyled foo-title">
                     <li class="fw-bold my-2">USEFULL LINKS</li>
-                    <li><a href="" class="text-decoration-none">Home</a></li>
-                    <li><a href="" class="text-decoration-none">About Us</a></li>
-                    <li><a href="" class="text-decoration-none">My Profile</a></li>
-                    <li><a href="" class="text-decoration-none">Logout</a></li>
+                    <li><a href="home.jsp" class="text-decoration-none">Home</a></li>
+                    <li><a href="aboutUs_after.jsp" class="text-decoration-none">About Us</a></li>
+                    <li><a href="AboutUser.jsp" class="text-decoration-none">My Profile</a></li>
+                    <li><a href="../LogoutServlet" class="text-decoration-none">Logout</a></li>
                     
                 </ul>
             </div>

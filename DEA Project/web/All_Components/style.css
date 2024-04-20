@@ -32,11 +32,18 @@
     background-color: #1976d2  ;
     color: white;
 }
-.btn-nav {
+.btn-nav{
     background-color: #f1f8e9     ;
 }
 .btn-nav:hover {
     background-color: #dee3d8     ;
+}
+.btn-bu {
+    color: #286629;
+}
+.btn-bu:hover {
+    color: #138514;
+    text-decoration: none;
 }
 .btn-lo {
     background-color: #00c853     ;
@@ -134,7 +141,6 @@
     padding: 7.4px;
     background: #18494d ;
     color: red;
-    margin: 1 0.5rem;
     border-radius: 50%;
     font-size: 20px
 }

@@ -79,8 +79,8 @@
                                 <p class="card-para1"><%= i.getName() %></p>
                                 <p class="card-para2">Price : <%= i.getPrice() %></p>
                                 <div class="d-flex flex-row justify-content-around">
-                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
-                                    <a href="" class="btn btn-success btn-sm">View Details</a>
+                                    <a href="login.jsp" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                    <a href="view_items.jsp" class="btn btn-success btn-sm">View Details</a>
                                 </div>
                             </div>
                         </div>
@@ -115,8 +115,8 @@
                                 <p class="card-para1"><%= i.getName() %></p>
                                 <p class="card-para2">Price : <%= i.getPrice() %></p>
                                 <div class="d-flex flex-row justify-content-around">
-                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
-                                    <a href="" class="btn btn-success btn-sm">View Details</a>
+                                    <a href="login.jsp" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                    <a href="view_items.jsp" class="btn btn-success btn-sm">View Details</a>
                                 </div>
                             </div>
                         </div>
@@ -155,8 +155,8 @@
                                 <p class="card-para1"><%= i.getName() %></p>
                                 <p class="card-para2">Price : <%= i.getPrice() %></p>
                                 <div class="d-flex flex-row justify-content-around">
-                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
-                                    <a href="" class="btn btn-success btn-sm">View Details</a>
+                                    <a href="login.jsp" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                    <a href="view_items.jsp" class="btn btn-success btn-sm">View Details</a>
                                 </div>
                             </div>
                         </div>
@@ -193,8 +193,8 @@
                                 <p class="card-para1"><%= i.getName() %></p>
                                 <p class="card-para2">Price : <%= i.getPrice() %></p>
                                 <div class="d-flex flex-row justify-content-around">
-                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
-                                    <a href="" class="btn btn-success btn-sm">View Details</a>
+                                    <a href="login.jsp" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                    <a href="view_items.jsp" class="btn btn-success btn-sm">View Details</a>
                                 </div>
                             </div>
                         </div>
@@ -230,8 +230,8 @@
                                 <p class="card-para1"><%= i.getName() %></p>
                                 <p class="card-para2">Price : <%= i.getPrice() %></p>
                                 <div class="d-flex flex-row justify-content-around">
-                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
-                                    <a href="" class="btn btn-success btn-sm">View Details</a>
+                                    <a href="login.jsp" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                    <a href="view_items.jsp" class="btn btn-success btn-sm">View Details</a>
                                 </div>
                             </div>
                         </div>
@@ -242,7 +242,7 @@
                         
                 </div>
                 <div class="text-center mt-1">
-                    <a href="Equipment.jsp" class="btn btn-danger btn-sm text-white ">View All</a>
+                    <a href="equipment.jsp" class="btn btn-danger btn-sm text-white ">View All</a>
                 </div>
             </div>         
         </div>

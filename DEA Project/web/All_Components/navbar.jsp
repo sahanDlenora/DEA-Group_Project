@@ -36,8 +36,8 @@
       <li class="nav-item active"><a class="nav-link" href="equipment.jsp"><i class="fa-solid fa-tree"></i> Equipments</a></li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-      <button class="btn btn-nav my-2 my-sm-0" type="submit"><i class="fa-solid fa-user-group"></i> About Us</button>
-      <button class="btn btn-nav my-2 my-sm-0 ml-1" type="submit"><i class="fa-solid fa-phone"></i> Contact Us</button>
+        <button class="btn btn-nav my-2 my-sm-0" type="submit"><a href="aboutUs.jsp" class="btn-bu"><i class="fa-solid fa-user-group"></i> About Us</a></button>
+        <button class="btn btn-nav my-2 my-sm-0 ml-1" type="submit"><a href="contact us.jsp" class="btn-bu"><i class="fa-solid fa-phone"></i> Contact Us</a></button>
     </form>
   </div>
 </nav>

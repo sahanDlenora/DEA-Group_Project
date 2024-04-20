@@ -27,7 +27,7 @@
             if(login!=null)
             {%>
                 <div class="col-md-3 text-center">   
-                    <a href="" class="btn btn-custom-after"><i class="fa-solid fa-circle-user"></i> <%=login1.getEmail()%></a>
+                    <a href="AboutUser.jsp" class="btn btn-custom-after"><i class="fa-solid fa-circle-user"></i> <%=login1.getEmail()%></a>
                     <a href="../LogoutServlet" class="btn btn-lo"><i class="fa-solid fa-right-to-bracket"></i> Logout</a>
                 </div>
             <%
@@ -49,15 +49,16 @@
       <li class="nav-item active">
         <a class="nav-link" href="home.jsp"><i class="fa-solid fa-house"></i> Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item active"><a class="nav-link" href="recent_items_after.jsp"><i class="fa-solid fa-tree"></i> Recent Items</a></li>
       <li class="nav-item active"><a class="nav-link" href="plants_after.jsp"><i class="fa-solid fa-seedling"></i> Plants</a></li>
       <li class="nav-item active"><a class="nav-link" href="seeds_after.jsp"><i class="fa-solid fa-bowling-ball"></i> Seeds</a></li>
       <li class="nav-item active"><a class="nav-link" href="fertilizer_after.jsp"><i class="fa-solid fa-box"></i> Fertilizer</a></li>
+      <li class="nav-item active"><a class="nav-link" href="equipment_after.jsp"><i class="fa-solid fa-tree"></i> Equipments</a></li>
+
     </ul>
     <form class="form-inline my-2 my-lg-0">
-       <a href="" class="nav-icon-after"><i class="fa-solid fa-cart-arrow-down fa-2x mt-1"></i></a>
-      <button class="btn btn-nav my-2 my-sm-0 ml-2" type="submit"><i class="fa-solid fa-user-group"></i> About Us</button>
-      <button class="btn btn-nav my-2 my-sm-0 ml-1" type="submit"><i class="fa-solid fa-phone"></i> Contact Us</button>
+       <a href="cart.jsp" class="nav-icon-after"><i class="fa-solid fa-cart-arrow-down fa-2x mt-1"></i></a>
+      <button class="btn btn-nav my-2 my-sm-0 ml-2" type="submit"><a href="aboutUs_after.jsp" class="btn-bu"><i class="fa-solid fa-user-group"></i> About Us</a></button>
+        <button class="btn btn-nav my-2 my-sm-0 ml-1" type="submit"><a href="contact us_after.jsp" class="btn-bu"><i class="fa-solid fa-phone"></i> Contact Us</a></button>
     </form>
   </div>
 </nav>

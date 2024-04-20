@@ -4,16 +4,16 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Insert Title Here</title>
-        <%@include file="All_Components/allCss.jsp" %>
+        <%@include file="allCss.jsp" %>
     </head>
     <body style="background-color: #f0f1f2">
         
     </body>
-    <%@include file="All_Components/navbar.jsp"%>
+    <%@include file="../All_Components/navbar_after.jsp"%>
     <div class="container p-3">
         <div class="row p-5">
             <div class="col-md-6 text-center p-5 border bg-white">
-                <img src="images/b.jpg" style="height:150px; width:150px"><br><br>
+                <img src="../images/b.jpg" style="height:150px; width:150px"><br><br>
                 <h4 class="mt-2">Seeds's Name :<span class="text-success"> Corn</span></h4>
                 <h4>category : <span class="text-success">Recent</span></h4>
             </div>
@@ -42,13 +42,13 @@
                 
                 
                 <div class=" text-center p-3">
-                    <a href="login.jsp" class="btn btn-primary"><i class="fa fa-cart-plus" aria-hidden="true"></i>Add Cart</a>
-                    <a href="login.jsp" class="btn btn-danger"><i class="fa fa-usd" aria-hidden="true"></i>200</a>
+                    <a href="" class="btn btn-primary"><i class="fa fa-cart-plus" aria-hidden="true"></i>Add Cart</a>
+                    <a href="" class="btn btn-danger"><i class="fa fa-usd" aria-hidden="true"></i>200</a>
                 </div>
                 
             </div>
         </div>   
     </div>
-    <%@include file="All_Components/footer.jsp" %>
+    <%@include file="../All_Components/footer_after.jsp" %>
 </body>
 </html>
