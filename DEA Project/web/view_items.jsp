@@ -1,4 +1,5 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="net.javaguides.registration.controller.DbConnect"%>
+<%@page import="java.sql.Connection"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,19 +9,31 @@
     </head>
     <body style="background-color: #f0f1f2">
         
-    </body>
+    </body>   
+    
     <%@include file="All_Components/navbar.jsp"%>
+        
+     <% 
+        String id = request.getParameter("Id");
+        String name = request.getParameter("Iname");
+        String price = request.getParameter("Iprice");
+        String imgName = request.getParameter("img_name");
+        String status = request.getParameter("Istatus");
+        String category = request.getParameter("Icategory");%>
+
+    
     <div class="container p-3">
         <div class="row p-5">
             <div class="col-md-6 text-center p-5 border bg-white">
-                <img src="images/b.jpg" style="height:150px; width:150px"><br><br>
-                <h4 class="mt-2">Seeds's Name :<span class="text-success"> Corn</span></h4>
-                <h4>category : <span class="text-success">Recent</span></h4>
+                <img src="admin/imgs/<%= imgName %>" style="height:150px; width:150px"><br><br>
+                <h4 class="mt-2">Name : <span class="text-success"><%= name %></span></h4>
+                <h4>category : <span class="text-success"><%= category %></span></h4>
+                <h4>Status : <span class="text-success"><%= status %></span></h4>
             </div>
             <div class="col-md-6 text-center p-5 border bg-white">
                 
 
-                <h2>Seeds</h2> <br>
+                <h2><%= category %></h2> <br>
                 
                 <h5 class="text-primary">Contact To Seller</h5>
                 <h5 class="text-primary"><i class="fa-regular fa-envelope"></i> Email: plantme@gmail.com</h5>
@@ -43,7 +56,7 @@
                 
                 <div class=" text-center p-3">
                     <a href="login.jsp" class="btn btn-primary"><i class="fa fa-cart-plus" aria-hidden="true"></i>Add Cart</a>
-                    <a href="login.jsp" class="btn btn-danger"><i class="fa fa-usd" aria-hidden="true"></i>200</a>
+                    <a href="login.jsp" class="btn btn-danger"><i class="fa fa-usd" aria-hidden="true"></i><%= price %></a>
                 </div>
                 
             </div>

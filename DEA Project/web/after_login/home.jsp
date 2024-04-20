@@ -73,7 +73,7 @@
                     <div class="col-lg-3 col-md-6 ">
                         <div class="card crd-ho">
                             <div class="card-body text-center">
-                                <img src="admin/imgs/<%=i.getImage() %>" alt="" class="img-fluid card-img">
+                                <img src="../admin/imgs/<%=i.getImage() %>" alt="" class="img-fluid card-img">
                                 <p class="card-para1"><%= i.getName() %></p>
                                 <p class="card-para2">Price : <%= i.getPrice() %></p>
                                 <div class="d-flex flex-row justify-content-around">

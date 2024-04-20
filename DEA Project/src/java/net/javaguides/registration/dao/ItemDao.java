@@ -3,6 +3,7 @@ package net.javaguides.registration.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import net.javaguides.registration.model.Item;
@@ -31,6 +32,7 @@ public class ItemDao {
                 row.setCategory(rs.getString("Icategory"));
                 row.setPrice(rs.getDouble("Iprice"));
                 row.setImage(rs.getString("img_name"));
+                row.setStatus(rs.getString("Istatus"));
                 
                 items.add(row);
             }
@@ -55,6 +57,7 @@ public class ItemDao {
                 row.setCategory(rs.getString("Icategory"));
                 row.setPrice(rs.getDouble("Iprice"));
                 row.setImage(rs.getString("img_name"));
+                row.setStatus(rs.getString("Istatus"));
                 
                 items.add(row);
             }
@@ -79,6 +82,7 @@ public class ItemDao {
                 row.setCategory(rs.getString("Icategory"));
                 row.setPrice(rs.getDouble("Iprice"));
                 row.setImage(rs.getString("img_name"));
+                row.setStatus(rs.getString("Istatus"));
                 
                 items.add(row);
             }
@@ -91,6 +95,7 @@ public class ItemDao {
     }
     
     public List<Item> getEquipmentItem(){
+        
         List<Item> items= new ArrayList<Item>();
         try{
             query="select * from item_details where Icategory = 'Equipment'";
@@ -103,6 +108,7 @@ public class ItemDao {
                 row.setCategory(rs.getString("Icategory"));
                 row.setPrice(rs.getDouble("Iprice"));
                 row.setImage(rs.getString("img_name"));
+                row.setStatus(rs.getString("Istatus"));
                 
                 items.add(row);
             }
@@ -129,6 +135,7 @@ public class ItemDao {
                 row.setCategory(rs.getString("Icategory"));
                 row.setPrice(rs.getDouble("Iprice"));
                 row.setImage(rs.getString("img_name"));
+                row.setStatus(rs.getString("Istatus"));
                 
                 items.add(row);
                 
@@ -157,6 +164,7 @@ public class ItemDao {
                 row.setCategory(rs.getString("Icategory"));
                 row.setPrice(rs.getDouble("Iprice"));
                 row.setImage(rs.getString("img_name"));
+                row.setStatus(rs.getString("Istatus"));
                 
                 items.add(row);
                 
@@ -185,6 +193,7 @@ public class ItemDao {
                 row.setCategory(rs.getString("Icategory"));
                 row.setPrice(rs.getDouble("Iprice"));
                 row.setImage(rs.getString("img_name"));
+                row.setStatus(rs.getString("Istatus"));
                 
                 items.add(row);
                 
@@ -212,6 +221,7 @@ public class ItemDao {
                 row.setCategory(rs.getString("Icategory"));
                 row.setPrice(rs.getDouble("Iprice"));
                 row.setImage(rs.getString("img_name"));
+                row.setStatus(rs.getString("Istatus"));
                 
                 items.add(row);
                 
@@ -240,6 +250,7 @@ public class ItemDao {
                 row.setCategory(rs.getString("Icategory"));
                 row.setPrice(rs.getDouble("Iprice"));
                 row.setImage(rs.getString("img_name"));
+                row.setStatus(rs.getString("Istatus"));
                 
                 items.add(row);
                 
@@ -252,6 +263,5 @@ public class ItemDao {
         
         return items;
     }
-    
-    
+       
 }
