@@ -77,40 +77,7 @@ public class adminEditItemServlet extends HttpServlet {
             throws ServletException, IOException {
         //processRequest(request, response);
         
-        String id = request.getParameter("id");
-        String Iname = request.getParameter("Iname");
-        String Iprice = request.getParameter("price");
-        String Itype = request.getParameter("Itype");
-        String Istatus = request.getParameter("Istatus");
-    
-    try{
-        Connection conn= DbConnect.getConn();
         
-        PreparedStatement ps = conn.prepareStatement("update item_details set Iname=?,Iprice=?,Icategory=?,Istatus=? where Id=?");
-        ps.setString(1, Iname);
-        ps.setString(2, Iprice);
-        ps.setString(3, Itype);
-        ps.setString(4, Istatus);
-        ps.setString(5, id);
-        
-        int i= ps.executeUpdate();
-        
-        if(i==1){
-            HttpSession session = request.getSession();
-            session.setAttribute("edt-msg", "Successfully Updated..");
-            response.sendRedirect("admin/allItems.jsp");
-        }else{
-            HttpSession session = request.getSession();
-            session.setAttribute("error-msg", "something went wrong..! Try Again..!");
-            response.sendRedirect("admin/allItems.jsp");
-
-        }
-       
-    }catch(Exception e){
-        e.printStackTrace();
-        response.sendRedirect("admin/allItems.jsp");
-        
-    }
     }
 
     /**

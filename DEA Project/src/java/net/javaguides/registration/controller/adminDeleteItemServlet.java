@@ -61,17 +61,7 @@ public class adminDeleteItemServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         //processRequest(request, response);
-        String id = request.getParameter("id");
-        
-        try{
-             Connection conn= DbConnect.getConn();
-             Statement st = conn.createStatement();
-             int i = st.executeUpdate("delete from item_details where id='"+id+"'");
-             response.sendRedirect("admin/allItems.jsp");
-            
-        }catch(Exception e){
-            response.sendRedirect("admin/allItems.jsp");
-        }
+       
         
     }
 
