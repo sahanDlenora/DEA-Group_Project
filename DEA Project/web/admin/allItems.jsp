@@ -1,3 +1,4 @@
+<%@page import="net.javaguides.registration.model.Item"%>
 <%@page import="net.javaguides.registration.controller.DbConnect"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.PreparedStatement"%>
@@ -13,6 +14,16 @@
     <body>
 
         <h3 class="text-center">Hello Admin</h3>
+        
+        <%String edtMsg = (String) session.getAttribute("edt-msg");
+            if (edtMsg != null) {%>
+                <div class="alert alert-success" role="alert">
+                <%= edtMsg%>
+                </div>
+                <%}
+                 %>
+        
+        
 
         <table class="table table-striped">
             <thead class="bg-primary text-white">
@@ -37,6 +48,8 @@
                     while (rs.next()) {
                 %>
                 <tr>
+                    
+                                
                     <th scope="row"><%= rs.getInt("Id") %></th>
                     <td><img alt="" src="imgs/<%=rs.getString("img_name")%>" width="100px" height="50px"></td>
                     <td><%= rs.getString("Iname") %></td>
@@ -44,8 +57,8 @@
                     <td><%= rs.getString("Icategory") %></td>
                     <td><%= rs.getString("Istatus") %></td>
                     <td>
-                        <a href="#" class="btn btn-primary">Edit</a>
-                        <a href="#" class="btn btn-danger">Delete</a>
+                        <a href="edit_items.jsp?id=<%=rs.getString(1)%>" class="btn btn-primary">Edit</a>
+                        <a href="../adminDeleteItemServlet?id=<%=rs.getString(1)%>" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
                 <% }
