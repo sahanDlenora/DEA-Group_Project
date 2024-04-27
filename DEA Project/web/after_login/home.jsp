@@ -90,9 +90,14 @@
                                 <% String ic = i.getCategory(); %>
                                 
                                 <div class="d-flex flex-row justify-content-around">
+<<<<<<< Updated upstream
                                     
                                     <a href="../cart?Id=<%=id%>&Iname=<%=n%>&Iprice=<%=p%>&user_id=<%=ln.getId()%>" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
                                     <a href="../view_items.jsp?Id=<%=id%>&Iname=<%=n%>&Iprice=<%=p%>&img_name=<%=im%>&Istatus=<%=s%>&Icategory=<%=ic%>" class="btn btn-success btn-sm">View Details</a>
+=======
+                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                    <a href="view_items_after.jsp" class="btn btn-success btn-sm">View Details</a>
+>>>>>>> Stashed changes
                                 </div>
                             </div>
                         </div>
