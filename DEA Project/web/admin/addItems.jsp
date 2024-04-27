@@ -27,6 +27,8 @@
                             </div>
                             <%}
                             %>
+                           
+                            
                             <form action="../AdminAddItemServlet" method="POST" enctype="multipart/form-data">
 
                                 <div class="form-group">

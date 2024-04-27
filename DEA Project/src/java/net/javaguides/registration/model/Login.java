@@ -1,19 +1,32 @@
 package net.javaguides.registration.model;
 
 public class Login {
+    private int id;
     private String name;
     private String email;
-    private String password;    
+    private String password;   
+    private String phone;
     
     public Login () {
         super();
     }
 
-    public Login(String name, String email, String password) {
+    public Login(int id, String name, String email, String phone, String password) {
+        this.id = id;
         this.name = name;
         this.email = email;
+        this.phone = phone;
         this.password = password;     
     }
+    
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    
     public String getName() {
         return name;
     }
@@ -28,6 +41,14 @@ public class Login {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+    
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getPassword() {

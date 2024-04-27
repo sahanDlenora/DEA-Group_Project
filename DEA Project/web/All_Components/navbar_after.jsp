@@ -27,7 +27,7 @@
             if(login!=null)
             {%>
                 <div class="col-md-3 text-center">   
-                    <a href="AboutUser.jsp" class="btn btn-custom-after"><i class="fa-solid fa-circle-user"></i> <%=login1.getEmail()%></a>
+                    <a href="AboutUser.jsp" class="btn btn-custom-after"><i class="fa-solid fa-circle-user"></i> <%=login1.getName()%></a>
                     <a href="../LogoutServlet" class="btn btn-lo"><i class="fa-solid fa-right-to-bracket"></i> Logout</a>
                 </div>
             <%

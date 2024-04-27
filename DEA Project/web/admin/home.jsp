@@ -36,7 +36,7 @@
                   </div> 
                 
                  <div class="col-md-3 ">
-                     <a href="AllItems.jsp">
+                     <a href="allItems.jsp">
                     <div class="card">
                         <div class="card-body text-center">
                             <i class="fas fa-th-large fa-3x text-danger"></i><br>

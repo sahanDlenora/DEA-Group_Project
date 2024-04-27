@@ -38,6 +38,10 @@
     </head>
 
     <body style="background-color:#f1f8e9">
+        
+        <%
+            Login ln = (Login)session.getAttribute("user-ob");
+        %>
 
         <%@include file="../All_Components/navbar_after.jsp"%>
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -70,15 +74,25 @@
                         if (!itemsR.isEmpty()) {
                         for (Item i : itemsR) {%>
                         
+                     
                     <div class="col-lg-3 col-md-6 ">
                         <div class="card crd-ho">
                             <div class="card-body text-center">
                                 <img src="../admin/imgs/<%=i.getImage() %>" alt="" class="img-fluid card-img">
                                 <p class="card-para1"><%= i.getName() %></p>
                                 <p class="card-para2">Price : <%= i.getPrice() %></p>
+                                
+                                <% int id = i.getId(); %>
+                                <% String n = i.getName(); %>
+                                <% double p = i.getPrice(); %>
+                                <% String im = i.getImage(); %>
+                                <% String s = i.getStatus(); %>
+                                <% String ic = i.getCategory(); %>
+                                
                                 <div class="d-flex flex-row justify-content-around">
-                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
-                                    <a href="" class="btn btn-success btn-sm">View Details</a>
+                                    
+                                    <a href="../cart?Id=<%=id%>&Iname=<%=n%>&Iprice=<%=p%>&user_id=<%=ln.getId()%>" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                    <a href="../view_items.jsp?Id=<%=id%>&Iname=<%=n%>&Iprice=<%=p%>&img_name=<%=im%>&Istatus=<%=s%>&Icategory=<%=ic%>" class="btn btn-success btn-sm">View Details</a>
                                 </div>
                             </div>
                         </div>
@@ -112,9 +126,17 @@
                                 <img src="../admin/imgs/<%=i.getImage() %>" alt="" class="img-fluid card-img">
                                 <p class="card-para1"><%= i.getName() %></p>
                                 <p class="card-para2">Price : <%= i.getPrice() %></p>
+                                
+                                <% int id = i.getId(); %>
+                                <% String n = i.getName(); %>
+                                <% double p = i.getPrice(); %>
+                                <% String im = i.getImage(); %>
+                                <% String s = i.getStatus(); %>
+                                <% String ic = i.getCategory(); %>
+                                
                                 <div class="d-flex flex-row justify-content-around">
-                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
-                                    <a href="view_items_after.jsp" class="btn btn-success btn-sm">View Details</a>
+                                    <a href="../cart?Id=<%=id%>&Iname=<%=n%>&Iprice=<%=p%>&user_id=<%=ln.getId()%>" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                    <a href="../view_items.jsp?Id=<%=id%>&Iname=<%=n%>&Iprice=<%=p%>&img_name=<%=im%>&Istatus=<%=s%>&Icategory=<%=ic%>" class="btn btn-success btn-sm" class="btn btn-success btn-sm">View Details</a>
                                 </div>
                             </div>
                         </div>
@@ -152,9 +174,17 @@
                                 <img src="../admin/imgs/<%=i.getImage() %>" alt="" class="img-fluid card-img">
                                 <p class="card-para1"><%= i.getName() %></p>
                                 <p class="card-para2">Price : <%= i.getPrice() %></p>
+                                
+                                <% int id = i.getId(); %>
+                                <% String n = i.getName(); %>
+                                <% double p = i.getPrice(); %>
+                                <% String im = i.getImage(); %>
+                                <% String s = i.getStatus(); %>
+                                <% String ic = i.getCategory(); %>
+                                
                                 <div class="d-flex flex-row justify-content-around">
-                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
-                                    <a href="view_items_after.jsp" class="btn btn-success btn-sm">View Details</a>
+                                    <a href="../cart?Id=<%=id%>&Iname=<%=n%>&Iprice=<%=p%>&user_id=<%=ln.getId()%>" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                    <a href="../view_items.jsp?Id=<%=id%>&Iname=<%=n%>&Iprice=<%=p%>&img_name=<%=im%>&Istatus=<%=s%>&Icategory=<%=ic%>" class="btn btn-success btn-sm">View Details</a>
                                 </div>
                             </div>
                         </div>
@@ -190,9 +220,17 @@
                                 <img src="../admin/imgs/<%=i.getImage() %>" alt="" class="img-fluid card-img">
                                 <p class="card-para1"><%= i.getName() %></p>
                                 <p class="card-para2">Price : <%= i.getPrice() %></p>
+                                
+                                <% int id = i.getId(); %>
+                                <% String n = i.getName(); %>
+                                <% double p = i.getPrice(); %>
+                                <% String im = i.getImage(); %>
+                                <% String s = i.getStatus(); %>
+                                <% String ic = i.getCategory(); %>
+                                
                                 <div class="d-flex flex-row justify-content-around">
-                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
-                                    <a href="view_items_after.jsp" class="btn btn-success btn-sm">View Details</a>
+                                    <a href="../cart?Id=<%=id%>&Iname=<%=n%>&Iprice=<%=p%>&user_id=<%=ln.getId()%>" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                    <a href="../view_items.jsp?Id=<%=id%>&Iname=<%=n%>&Iprice=<%=p%>&img_name=<%=im%>&Istatus=<%=s%>&Icategory=<%=ic%>" class="btn btn-success btn-sm">View Details</a>
                                 </div>
                             </div>
                         </div>
@@ -225,9 +263,17 @@
                                 <img src="../admin/imgs/<%=i.getImage() %>" alt="" class="img-fluid card-img">
                                 <p class="card-para1"><%= i.getName() %></p>
                                 <p class="card-para2">Price : <%= i.getPrice() %></p>
+                                
+                                <% int id = i.getId(); %>
+                                <% String n = i.getName(); %>
+                                <% double p = i.getPrice(); %>
+                                <% String im = i.getImage(); %>
+                                <% String s = i.getStatus(); %>
+                                <% String ic = i.getCategory(); %>
+                                
                                 <div class="d-flex flex-row justify-content-around">
-                                    <a href="login.jsp" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
-                                    <a href="view_items.jsp" class="btn btn-success btn-sm">View Details</a>
+                                    <a href="../cart?Id=<%=id%>&Iname=<%=n%>&Iprice=<%=p%>&user_id=<%=ln.getId()%>" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                    <a href="../view_items.jsp?Id=<%=id%>&Iname=<%=n%>&Iprice=<%=p%>&img_name=<%=im%>&Istatus=<%=s%>&Icategory=<%=ic%>" class="btn btn-success btn-sm">View Details</a>
                                 </div>
                             </div>
                         </div>
