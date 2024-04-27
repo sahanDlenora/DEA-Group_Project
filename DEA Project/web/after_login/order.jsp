@@ -13,12 +13,14 @@
         <%@include file="allCss.jsp" %>
     </head>
     <body style="background-color: #f1f8e9">
+        
         <%@include file="../All_Components/navbar_after.jsp"%>
+        
         <div class="container p-1">
             <h3 class="text-center text-primary">Your Order</h3>
              <table class="table table-striped mt-3">
                  <thead class="bg-primary text-white">
-                  <tr>
+                     <tr>
                     <th scope="col">Order Id</th>
                     <th scope="col">Category</th>
                     <th scope="col">Price</th>
