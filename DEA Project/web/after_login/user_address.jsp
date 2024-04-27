@@ -1,14 +1,21 @@
+<%-- 
+    Document   : user_address
+    Created on : Apr 27, 2024, 10:19:15 PM
+    Author     : ASUS_RSA
+--%>
 
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page isELIgnored="false"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>user_address</title>
-        <%@include file="All_Components/allCss.jsp" %>
+        <title>Edit Address</title>
+        <%@include file="allCss.jsp" %>
     </head>
     <body style="background-color: #f1f8e9">
-        <%@include file="All_Components/navbar.jsp" %>
+        <%@include file="../All_Components/navbar_after.jsp"%> 
         <div class="container p-2">
             <div class="row p-3">
                 <div class="col-md-6 offset-md-3">
@@ -56,6 +63,6 @@
                 </div>
             </div>
         </div>
-          <%@include file="All_Components/footer.jsp" %>
+      <%@include file="../All_Components/footer_after.jsp" %>  
     </body>
 </html>
