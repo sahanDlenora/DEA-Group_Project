@@ -12,6 +12,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import net.javaguides.registration.dao.CartDao;
 
 /**
  *
@@ -58,7 +60,20 @@ public class RemoveItemServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        int item_id = Integer.parseInt(request.getParameter("item_id"));
+        CartDao dao = new CartDao();
+        boolean f = dao.deleteItem(item_id);
+        HttpSession session = request.getSession();
+
+        
+        if(f) {
+            session.setAttribute("succMsg", "Item remove from cart");
+            response.sendRedirect("after_login/cart.jsp");
+        }else {
+            session.setAttribute("failedMsg", "Something wrong on server");
+            response.sendRedirect("after_login/cart.jsp");
+        }
+        
     }
 
     /**
