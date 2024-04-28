@@ -5,25 +5,20 @@
  */
 package net.javaguides.registration.controller;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import javax.servlet.http.Part;
 
 /**
  *
- * @author user
+ * @author User
  */
-@WebServlet(name = "cart", urlPatterns = {"/cart"})
-public class cart extends HttpServlet {
+@WebServlet(name = "CartServlet", urlPatterns = {"/CartServlet"})
+public class CartServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -42,10 +37,10 @@ public class cart extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet cart</title>");            
+            out.println("<title>Servlet CartServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet cart at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet CartServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -63,9 +58,7 @@ public class cart extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //processRequest(request, response);
-
-        
+        processRequest(request, response);
     }
 
     /**
@@ -79,7 +72,7 @@ public class cart extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //processRequest(request, response);
+        processRequest(request, response);
     }
 
     /**

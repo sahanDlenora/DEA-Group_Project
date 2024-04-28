@@ -21,7 +21,7 @@ a:hover{
 <%@include file="../All_Components/navbar_after.jsp"%>
 
     <div class="container">
-        <h3 class="text-center mt-2">Hello, <%=login1.getEmail()%></h3>
+        <h3 class="text-center mt-2">Hello, <%=login1.getName()%></h3>
         <div class="row p-5">
             <div class="col-md-6">
                 <a href="">
