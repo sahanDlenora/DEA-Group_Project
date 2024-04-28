@@ -7,11 +7,20 @@ package net.javaguides.registration.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import net.javaguides.registration.dao.CartDao;
+import net.javaguides.registration.dao.ItemDao;
+import net.javaguides.registration.dao.LoginDao;
+import net.javaguides.registration.model.Cart;
+import net.javaguides.registration.model.Item;
+import net.javaguides.registration.model.Login;
 
 /**
  *
@@ -58,7 +67,32 @@ public class CartServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        
+        int item_id = Integer.parseInt(request.getParameter("Id"));
+        int user_id = Integer.parseInt(request.getParameter("user_id"));
+        String item_name = request.getParameter("Iname");
+        double price = Double.parseDouble(request.getParameter("Iprice"));
+        double tot_price = Double.parseDouble(request.getParameter("Iprice"));
+        
+        try {
+             Connection conn= DbConnect.getConn();
+            
+            PreparedStatement ps = conn.prepareStatement("insert into cart (item_id,user_id,item_name,price,total_price) values (?,?,?,?,?)");
+            ps.setInt(1, item_id);
+            ps.setInt(2, user_id);
+            ps.setString(3, item_name);
+            ps.setDouble(4, price);
+            ps.setDouble(5, tot_price);
+
+            ps.executeUpdate();
+            
+            response.sendRedirect("after_login/home.jsp");
+     
+            CartDao cartDao = new CartDao();
+                                    
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     /**
