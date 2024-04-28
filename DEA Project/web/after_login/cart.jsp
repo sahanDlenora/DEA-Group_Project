@@ -1,3 +1,6 @@
+<%@page import="net.javaguides.registration.model.Cart"%>
+<%@page import="java.util.List"%>
+<%@page import="net.javaguides.registration.dao.CartDao"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -8,41 +11,65 @@
     </head>
     <body style="background-color: #f0f1f2">
         <%@include file="../All_Components/navbar_after.jsp" %>
+        
         <div class="container">
             <div class="row p-2">
-                <div class="col-md-6">
-                    
-                    <div class="card bg-white">
+                <div class="col-md-6">                
+                    <div class="card bg-white">                  
                         <div class="card-body">
-                             <h3 class="text-center text-success">Your Selected Item</h3>
+                            <h3 class="text-center text-success">Your Selected Item</h3>
+                            <%
+                                String removeMsg = (String)session.getAttribute("succMsg");
+                                if(removeMsg != null) 
+                            {%>
+                                <div class="alert alert-success text-center" role="alert"><%= removeMsg %></div>
+                            <% 
+                                session.removeAttribute("succMsg");
+                            }
+                            %>
+        
+                            <%
+                                String errorMsg = (String)session.getAttribute("failedMsg");
+                                if(errorMsg != null) 
+                            {%>
+                                <div class="alert alert-danger text-center" role="alert"><%= errorMsg %></div>
+                                <%
+                                    session.removeAttribute("failedMsg");
+                            }
+                            %>
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">First</th>
-                                        <th scope="col">Last</th>
-                                        <th scope="col">Handle</th>
+                                        <th scope="col">Item Name</th>
+                                        <th scope="col">Price</th>
+                                        <th scope="col">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    
+                                    <%
+                                        Login lo = (Login)session.getAttribute("user-ob");
+                                        CartDao dao = new CartDao();
+                                        List<Cart> c = dao.getItemByUser(lo.getId());
+                                        Double totalPrice = 0.00;
+                                        for(Cart cart:c){
+                                            totalPrice = cart.getTotal_price();
+                                        %>
+                                            <tr>
+                                                <th scope="row"><%= cart.getItem_name() %></th>
+                                                <td><%= cart.getPrice() %></td>
+                                                <td>
+                                                    <a href="../RemoveItemServlet?item_id=<%= cart.getItem_id() %>" class="btn btn-sm btn-danger">Remove</a>
+                                                </td>
+                                            </tr>
+                                        <%}
+                                    %>
                                     <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td>@mdo</td>
+                                        <td style="color: green">Total Price</td>
+                                        <td></td>
+                                        <td style="color: green">Rs. <%=totalPrice%></td>
                                     </tr>
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td>@fat</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">3</th>
-                                        <td>Larry</td>
-                                        <td>the Bird</td>
-                                        <td>@twitter</td>
-                                    </tr>
+                                    
                                 </tbody>
                             </table>
                         </div>

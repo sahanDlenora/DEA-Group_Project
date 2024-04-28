@@ -67,7 +67,7 @@ public class RemoveItemServlet extends HttpServlet {
 
         
         if(f) {
-            session.setAttribute("succMsg", "Item remove from cart");
+            session.setAttribute("succMsg", "Remove Your Item");
             response.sendRedirect("after_login/cart.jsp");
         }else {
             session.setAttribute("failedMsg", "Something wrong on server");
