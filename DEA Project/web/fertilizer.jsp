@@ -4,8 +4,8 @@
 <%@page import="net.javaguides.registration.controller.DbConnect"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
-    ItemDao id=new ItemDao(DbConnect.getConn());
-    List<Item> items = id.getFertilizerItem();   
+    ItemDao idf=new ItemDao(DbConnect.getConn());
+    List<Item> items = idf.getFertilizerItem();   
     %>
 <!DOCTYPE html>
 <html>
@@ -32,9 +32,17 @@
                                 <img src="admin/imgs/<%=i.getImage() %>" alt="" class="img-fluid card-img">
                                 <p class="card-para1"><%= i.getName() %></p>
                                 <p class="card-para2">Price : <%= i.getPrice() %></p>
+                                
+                                <% int id = i.getId(); %>
+                                <% String n = i.getName(); %>
+                                <% double p = i.getPrice(); %>
+                                <% String im = i.getImage(); %>
+                                <% String s = i.getStatus(); %>
+                                <% String ic = i.getCategory(); %>
+                                
                                 <div class="d-flex flex-row justify-content-around">
-                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
-                                    <a href="" class="btn btn-success btn-sm">View Details</a>
+                                    <a href="login.jsp" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                    <a href="view_items.jsp?Id=<%=id%>&Iname=<%=n%>&Iprice=<%=p%>&img_name=<%=im%>&Istatus=<%=s%>&Icategory=<%=ic%>" class="btn btn-success btn-sm">View Details</a>
                                 </div>
                             </div>
                         </div>

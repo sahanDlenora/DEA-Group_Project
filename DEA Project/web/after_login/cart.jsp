@@ -10,6 +10,7 @@
         <%@include file="allCss.jsp" %>
     </head>
     <body style="background-color: #f0f1f2">
+        
         <%@include file="../All_Components/navbar_after.jsp" %>
         
         <div class="container">
@@ -88,13 +89,13 @@
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputPassword4">Email</label>
-                                        <input type="email" class="form-control" id="inputPassword4">
+                                        <input type="email" class="form-control" id="inputPassword4" >
                                     </div>
                                 </div>                            
                                  <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="inputEmail4">Phone Number</label>
-                                            <input type="number" class="form-control" id="inputEmail4">
+                                        <input type="number" class="form-control" id="inputEmail4">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputPassword4">Address</label>
