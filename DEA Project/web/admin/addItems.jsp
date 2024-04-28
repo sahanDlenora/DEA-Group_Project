@@ -10,9 +10,9 @@
         <title>Admin: Add Items</title>
         <%@include file="allCss.jsp" %>
     </head>
-    <body style="background-color: #98FB98;">
-        <%@include file="navbar.jsp" %>
-        <div class="container">
+    <body style="background-color: #f1f8e9;">
+        <%@include file="../All_Components/navbar_admin.jsp" %>
+        <div class="container p-2">
             <div class="row ">
                 <div class="col-md-4 offset-md-4">
                     <div class="card">
@@ -26,6 +26,7 @@
                                 <%= regMsg%>
                             </div>
                             <%}
+                                session.removeAttribute("reg-msg");
                             %>
                            
                             
@@ -73,23 +74,14 @@
 
                                 <br>
 
-                                <button type="submit" class="btn btn-primary">Add</button>
-
-
-
-
-
+                                <button type="submit" class="btn btn-primary">Add Item</button>
                             </form>
-
-
-
-
-
                         </div>
 
                     </div>
                 </div>
             </div>
         </div>
+        <%@include file="../All_Components/footer_admin.jsp" %>                    
     </body>
 </html>

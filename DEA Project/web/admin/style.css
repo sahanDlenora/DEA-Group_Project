@@ -1,31 +1,153 @@
-.bg-custom
-{
+.bg-custom {
     background-color: #00796b;
 }
-.navbar .nav-item:hover .nav-link
-{
-    background-color: white;
+.navbar .nav-item .nav-link {
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.1s;
+}
+.navbar .nav-item:hover .nav-link {
+    background-color: #f1f8e9;
     color: #00796b;
-    border-radius: 15px;
+    border-radius: 10px;
 }
-.me-4:hover 
-{
-    background-color: white;
-   color: #00796b; 
-  
+.bg-nav {
+    background-color: #f1f8e9     ;
 }
-text1:hover
-{
-    background-color: white;
-    color: #00796b; 
-     border-radius: 15px;
+.btn-custom {
+    background-color: #1e88e5         ;
+    color: white;
+    font-weight: 600;
 }
+.btn-custom:hover {
+    background-color: #1976d2  ;
+    color: white;
+}
+.btn-custom-after {
+    background-color: #1e88e5         ;
+    color: white;
+    font-weight: 600;
+}
+.btn-custom-after:hover {
+    background-color: #1976d2  ;
+    color: white;
+}
+.btn-nav{
+    background-color: #f1f8e9     ;
+}
+.btn-nav:hover {
+    background-color: #dee3d8     ;
+}
+.btn-bu {
+    color: #286629;
+}
+.btn-bu:hover {
+    color: #138514;
+    text-decoration: none;
+}
+.btn-lo {
+    background-color: #00c853     ;
+    color: white;
+    font-weight:  600;
+}
+.btn-lo:hover {
+    background-color: #0bb351  ;
+    color: white;
+}
+.text-logo {
+    color: #00c853  ;
+}
+.text-logo-icon {
+    color: #00796b ;
+    font-size: 35px;
+}
+.t {
+    font-weight: bold;
+}
+
 .name
 {
     background-color:#18ffff ;
 }
-.me
-{
-    background-color: green;
+
+.c-header {
+    background: #a5d9f0; 
 }
+.foo {
+    background-color: #28524d      ;
+}
+.t-footer {
+    font-weight: bold;
+}
+.foo-icon i{
+    padding: 0.5rem;
+    background: #22302f  ;
+    color: #00c853;
+    margin: 0 0.5rem;
+    border-radius: 50%;
+}
+.foo-icon i:hover{
+    background: #00c853;
+    color: white;
+}
+.list-unstyled.foo-icon {
+    justify-content: center;
+}
+.para {
+    font-weight: bold;
+    color: #f5f5f5 ;
+}
+.foo-title {
+    color: #00c853;
+}
+.foo-title a {
+    color: white;
+}
+.foo-title a:hover {
+    color: #bdbdbd ;
+}
+.foo-last {
+    color: #c0d1d0;
+    border: none;
+}
+.cd-body {
+    padding: 80px;
+}
+.card-img {
+    max-width: 250px;
+    height: 245px;
+}
+.card-para1 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    
+}
+.card-para2 {
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+.d-block {
+    width: 100%;
+    height: 50vh;
+    opacity: 0.7;
+}
+.category-title {
+    color: #00796b;
+}
+.crd-ho:hover {
+    background-color: #e1f2f5;
+}
+.nav-icon-after i {
+    padding: 7.4px;
+    background: #18494d ;
+    color: red;
+    border-radius: 50%;
+    font-size: 20px
+}
+.nav-icon-after i:hover {
+    background: red;
+    color: white;
+}
+
+
 

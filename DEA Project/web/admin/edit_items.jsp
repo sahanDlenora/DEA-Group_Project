@@ -12,11 +12,11 @@
         <title>Admin: Add Items</title>
         <%@include file="allCss.jsp" %>
     </head>
-    <body style="background-color: #98FB98;">
-        <%@include file="navbar.jsp" %>
+    <body style="background-color: #f1f8e9;">
+        <%@include file="../All_Components/navbar_admin.jsp" %>
        
         
-        <div class="container">
+        <div class="container p-2">
             <div class="row ">
                 <div class="col-md-4 offset-md-4">
                     <div class="card">
@@ -84,5 +84,6 @@
                 </div>
             </div>
         </div>
+        <%@include file="../All_Components/footer_admin.jsp" %>                    
     </body>
 </html>

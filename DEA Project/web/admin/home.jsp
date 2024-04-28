@@ -18,10 +18,11 @@
             </style>
             
     </head>
-    <body style="background-color: #98FB98;">
-        <%@include file="../All_Components/navbar.jsp" %>
+    <body style="background-color: #f1f8e9;">
+        <%@include file="../All_Components/navbar_admin.jsp" %>
 
         <div class="container">
+            <h2 class="text-center p-2">Hello, Admin</h2>
             <div class="row p-5">
                 <div class="col-md-3 ">
                     <a href="addItems.jsp">
@@ -62,6 +63,7 @@
                 
                 
                  <div class="col-md-3 ">
+                     <a href="../LogoutServlet">
                     <div class="card">
                         <div class="card-body text-center">
                             <i class="fas fa-sign-out-alt fa-3x text-primary"></i><br>
@@ -69,12 +71,12 @@
                             
                         </div>
                     </div>
+                     </a>
                   </div> 
                            
                         </div>
-                    </div>
+        </div>
               
-
-        <%@include file="../All_Components/footer.jsp" %>
+        <%@include file="../All_Components/footer_admin.jsp" %>
     </body>
 </html>

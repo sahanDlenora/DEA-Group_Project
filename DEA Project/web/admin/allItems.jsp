@@ -9,11 +9,11 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Admin : All Items</title>
-        <%@include file="../All_Components/allCss.jsp" %>
+        <%@include file="allCss.jsp" %>
     </head>
-    <body>
-
-        <h3 class="text-center">Hello Admin</h3>
+    <body style="background-color: #f1f8e9;">
+        <%@include file="../All_Components/navbar_admin.jsp" %>
+        <h3 class="text-center p-2">Hello Admin</h3>
         
         <%String edtMsg = (String) session.getAttribute("edt-msg");
             if (edtMsg != null) {%>
@@ -70,6 +70,6 @@
         </table>
 
 
-        <%@include file="../All_Components/footer.jsp" %>
+        <%@include file="../All_Components/footer_admin.jsp" %>
     </body>
 </html>

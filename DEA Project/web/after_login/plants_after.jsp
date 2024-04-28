@@ -27,7 +27,7 @@
                         if (!items.isEmpty()) {
                         for (Item i : items) {%>
                         
-                    <div class="col-lg-3 col-md-6 ">
+                    <div class="col-lg-3 col-md-6 p-2">
                         <div class="card crd-ho">
                             <div class="card-body text-center">
                                 <img src = "../admin/imgs/<%=i.getImage() %>" class="img-fluid card-img" alt = "..."> 
