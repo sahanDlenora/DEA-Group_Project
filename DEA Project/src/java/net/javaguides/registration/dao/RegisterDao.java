@@ -45,6 +45,7 @@ public class RegisterDao {
             ResultSet rs = ps.executeQuery();
             status = rs.next();
             
+
         } catch (SQLException ex) {
             ex.printStackTrace();
         }

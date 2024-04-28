@@ -7,43 +7,8 @@
             <minimum-ant-version>1.6.5</minimum-ant-version>
             <web-module-libraries>
                 <library dirs="200">
-<<<<<<< HEAD
-                    <file>${file.reference.mysql-connector-java-8.0.28.jar-1}</file>
-                    <path-in-war>WEB-INF/lib</path-in-war>
-=======
-                    <file>${file.reference.annotations-13.0.jar}</file>
-                </library>
-                <library dirs="200">
-                    <file>${file.reference.mysql-connector-java-8.0.28.jar-1}</file>
-                    <path-in-war>WEB-INF/lib</path-in-war>
-                </library>
-                <library dirs="200">
-                    <file>${file.reference.kotlin-stdlib-1.9.23.jar}</file>
-                </library>
-                <library dirs="200">
-                    <file>${file.reference.kotlin-stdlib-common-1.9.23.jar}</file>
-                </library>
-                <library dirs="200">
-                    <file>${file.reference.kotlin-test-1.9.23.jar}</file>
-                </library>
-                <library dirs="200">
-                    <file>${file.reference.kotlin-test-annotations-common-1.9.23.jar}</file>
-                </library>
-                <library dirs="200">
-                    <file>${file.reference.report-11.2.38.jar}</file>
-                </library>
-                <library dirs="200">
-                    <file>${file.reference.standard-11.2.38.jar}</file>
-                </library>
-                <library dirs="200">
-                    <file>${file.reference.jstl-1.2.jar}</file>
-                </library>
-                <library dirs="200">
                     <file>${file.reference.mysql-connector-java-8.0.28.jar}</file>
-                </library>
-                <library dirs="200">
-                    <file>${file.reference.protobuf-java-3.11.4.jar}</file>
->>>>>>> eb6633c568222dbd1a413a9bcb584323efe64e9a
+                    <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
             </web-module-libraries>
             <web-module-additional-libraries/>

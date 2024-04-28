@@ -1,4 +1,4 @@
-package net.javaguides.registration.controller;
+package com.java;
 
 import java.io.IOException;
 import java.io.PrintWriter;

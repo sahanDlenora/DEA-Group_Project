@@ -106,7 +106,6 @@ public class AdminAddItemServlet extends HttpServlet {
                 HttpSession session = request.getSession();
                 session.setAttribute("reg-msg", "uploaded Successfully");
                 response.sendRedirect("admin/addItems.jsp");
-                
             } else {
                 HttpSession session = request.getSession();
                 session.setAttribute("error-msg", "something went wrong");

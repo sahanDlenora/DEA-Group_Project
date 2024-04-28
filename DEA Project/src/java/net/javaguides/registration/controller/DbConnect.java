@@ -1,4 +1,4 @@
- package net.javaguides.registration.controller;
+package net.javaguides.registration.controller;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
