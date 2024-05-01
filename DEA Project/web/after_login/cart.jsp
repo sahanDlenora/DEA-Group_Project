@@ -10,7 +10,6 @@
         <%@include file="allCss.jsp" %>
     </head>
     <body style="background-color: #f0f1f2">
-        
         <%@include file="../All_Components/navbar_after.jsp" %>
         
         <div class="container">
@@ -81,53 +80,61 @@
                     <div class="card">
                         <div class="card-body">
                             <h3 class="text-center text-success">Your Details For Order</h3>
-                            <form>
+                            <%
+                                String errMsg = (String)session.getAttribute("fMsg");
+                                if(errMsg != null) 
+                            {%>
+                                <div class="alert alert-danger text-center" role="alert"><%= errMsg %></div>
+                                <%
+                                    session.removeAttribute("fMsg");
+                            }
+                            %>
+                            
+                            <form action="../OrderServlet" method="post">
                                  <div class="form-row">
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group col-md-6">                                        
+                                        <input type="hidden" value="<%=lo.getId()%>" name="id">
+                                        
                                         <label for="inputEmail4">Name</label>
-                                        <input type="text" class="form-control" id="inputEmail4" value="">
+                                        <input type="text" class="form-control" id="inputEmail4" value="<%= lo.getName() %>" name="name" required="required">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputPassword4">Email</label>
-                                        <input type="email" class="form-control" id="inputPassword4" >
+                                        <input type="email" class="form-control" id="inputPassword4" value="<%= lo.getEmail() %>" name="email" required="required">
                                     </div>
                                 </div>                            
                                  <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="inputEmail4">Phone Number</label>
-                                        <input type="number" class="form-control" id="inputEmail4">
+                                        <input type="text" class="form-control" id="inputEmail4" value="<%= lo.getPhone() %>" name="phone" required="required">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="inputPassword4">Address</label>
-                                        <input type="text" class="form-control" id="inputPassword4">
+                                        <input type="text" class="form-control" id="inputPassword4" name="address" required="required">
                                     </div>
                                 </div>                                
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="inputEmail4">Landmark</label>
-                                        <input type="text" class="form-control" id="inputEmail4">
-                                    </div>
-                                    <div class="form-group col-md-6">
                                         <label for="inputPassword4">City</label>
-                                        <input type="text" class="form-control" id="inputPassword4">
+                                        <input type="text" class="form-control" id="inputPassword4" name="city" required="required">
                                     </div>
-                                </div>                               
-                                <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="inputEmail4">State</label>
-                                        <input type="number" class="form-control" id="inputEmail4">
-                                    </div>
+                                        <input type="text" class="form-control" id="inputEmail4" name="state" required="required">
+                                    </div>                                  
+                                </div>                               
+                                <div class="form-row">                     
                                     <div class="form-group col-md-6">
                                         <label for="inputPassword4">Pin Code</label>
-                                        <input type="text" class="form-control" id="inputPassword4">
+                                        <input type="text" class="form-control" id="inputPassword4" name="pincode" required="required">
                                     </div>
                                 </div>
                                 
                                 <div class="form.group">
                                     <label>Payment Mode</label>
-                                    <select class="form.control">
-                                        <option>--select--</option>
-                                        <option>Cash on delivery</option>
+                                    <select class="form.control" name="payment">
+                                        <option value="noselect">--select--</option>
+                                        <option value="COD">Cash on delivery</option>
                                     </select>
                                 </div>
                                 
