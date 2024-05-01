@@ -4,10 +4,10 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>order</title>
-        <%@include file="All_Components/allCss.jsp" %>
+        <%@include file="allCss.jsp" %>
     </head>
      <body style="background-color: #f1f8e9">
-        <%@include file="All_Components/navbar.jsp" %>
+        <%@include file="../All_Components/navbar_after.jsp"%>
         <div class="container p-1">
             <h3 class="text-center text-primary">Your Order</h3>
              <table class="table table-striped mt-3">
@@ -33,6 +33,6 @@
         </div>
  
        
-        <%@include file="All_Components/footer.jsp" %>
+        <%@include file="../All_Components/footer_after.jsp" %>
     </body>
 </html>

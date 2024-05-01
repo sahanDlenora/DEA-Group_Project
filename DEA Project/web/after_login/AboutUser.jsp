@@ -70,7 +70,7 @@ a:hover{
     </div>
 
     <%@include file="../All_Components/footer_after.jsp" %> 
-<body>
+
 
 </body>
 </html>
