@@ -97,7 +97,13 @@ public class OrderServlet extends HttpServlet {
              CartDao dao = new CartDao();
             List<Cart> ilist = dao.getItemByUser(id);
             
-            OrderDao dao2 = new OrderDao();
+            HttpSession session = request.getSession();
+            
+            if(ilist.isEmpty()) {
+                session.setAttribute("addMsg", "Add Item");
+                response.sendRedirect("after_login/cart.jsp");
+            }else {
+                OrderDao dao2 = new OrderDao();
             Item_Order o = new Item_Order();
             int i = dao2.getOrderNo();
             
@@ -114,7 +120,7 @@ public class OrderServlet extends HttpServlet {
                 orderList.add(o);
                 i++;
             }
-            HttpSession session = request.getSession();
+            
             if("noselect".equals(payment)) {
                 session.setAttribute("fMsg", "Choose Payment Method");
                 response.sendRedirect("after_login/cart.jsp");
@@ -126,6 +132,7 @@ public class OrderServlet extends HttpServlet {
                     session.setAttribute("fMsg", "Your Order Failed");
                     response.sendRedirect("after_login/cart.jsp");
                 }
+            }
             }
             
         }

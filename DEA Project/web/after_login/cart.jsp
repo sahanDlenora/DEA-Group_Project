@@ -37,6 +37,16 @@
                                     session.removeAttribute("failedMsg");
                             }
                             %>
+                            
+                            <%
+                                String addErrMsg = (String)session.getAttribute("addMsg");
+                                if(addErrMsg != null) 
+                            {%>
+                                <div class="alert alert-danger text-center" role="alert"><%= addErrMsg %></div>
+                                <%
+                                    session.removeAttribute("addMsg");
+                            }
+                            %>
                             <table class="table table-striped">
                                 <thead>
                                     <tr>

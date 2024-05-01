@@ -50,7 +50,7 @@
                 
                 
                  <div class="col-md-3 ">
-                      <a href="Orders.jsp">
+                      <a href="order.jsp">
                     <div class="card">
                         <div class="card-body text-center">
                             <i class="fas fa-box-open fa-3x text-warning"></i><br>
