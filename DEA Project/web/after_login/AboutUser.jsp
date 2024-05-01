@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>About User</title>
 <%@include file="allCss.jsp" %>
 <style type="text/css">
 a{
@@ -14,7 +14,7 @@ a:hover{
     text-decoration: none;
 }
 </style>
-}
+
 </head>
 <body style="background-color: #f1f8e9;">
     
@@ -23,49 +23,24 @@ a:hover{
     <div class="container">
         <h3 class="text-center mt-2">Hello, <%=login1.getName()%></h3>
         <div class="row p-5">
-            <div class="col-md-6">
-                <a href="">
-                    <div class="card">
-                        <div class="card-body text-center">
-                            <div class="text-primary">
-                                <i class="fas fa-book-open fa-3x"></i> 
-                            </div>
-                            <h4>Sell Items</h4>
-                        </div>
-                    </div>
-                </a>
-            </div>
+           
 
-            <div class="col-md-6">
-                <a href="">
+            <div class="col-md-4 mt-3 ">
+                <a href="edit_profile.jsp">
                     <div class="card">
                         <div class="card-body text-center">
                             <div class="text-primary">
                                 <i class="fa-solid fa-id-card fa-3x"></i> 
                             </div>
-                            <h4>Login & Security (Edit Profile)</h4>
+                            <h4>Edit Profile</h4>
+                            <p>Login & Security</p>
                         </div>
                     </div>
                 </a>
             </div>
-
-
+            
             <div class="col-md-4 mt-3">
-                <a href="">
-                    <div class="card">
-                        <div class="card-body text-center">
-                            <div class="text-warning">
-                                <i class="fas fa-map-marker-alt fa-3x"></i> 
-                            </div>
-                            <h4>Your Address</h4>
-                            <p>Edit Address</p> 
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="col-md-4 mt-3">
-                <a href="">
+                <a href="order.jsp">
                     <div class="card">
                         <div class="card-body text-center">
                             <div class="text-danger">
@@ -77,23 +52,20 @@ a:hover{
                     </div>
                 </a>
             </div>
-
-
-
+            
             <div class="col-md-4 mt-3">
-                <a href="">
-                    <div class="card">
-                        <div class="card-body text-center">
-                            <div class="text-primary">
-                                <i class="fas fa-user-circle fa-3x"></i> 
+                    <a href="contact us_after.jsp">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <div class="text-primary">
+                                    <i class="fas fa-user-circle fa-3x"></i> 
+                                </div>
+                                <h4>Help Center</h4>
+                                <p>24 * 7 Service</p> 
                             </div>
-                            <h4>Help Center</h4>
-                            <p>24 * 7 Service</p> 
                         </div>
-                    </div>
-                </a>
+                    </a>
             </div>
-
         </div>
     </div>
 
