@@ -6,6 +6,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Contact Us</title>
+        <%@include file="All_Components/allCss.jsp" %>
         <style>
         
          
