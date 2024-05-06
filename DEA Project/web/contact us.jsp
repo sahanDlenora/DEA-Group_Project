@@ -112,7 +112,7 @@
             <h1>Contact Us</h1>
             <h3>Any questions or remarks?Just write us a message!</h3>
               
-            <form action="SendEmail" method="POST">
+            <form action="SendEmail" method="Post">
 
 
 
@@ -132,7 +132,7 @@
             </form>
 
         </div>
-        <div class="container">
+<!--        <div class="container">
             <h2>Contact Information</h2>
 
             <div class="contact-info">
@@ -150,7 +150,7 @@
                         Thalagala Rd,Homagama</p>
                 </div>
             </div>
-        </div>
+        </div>-->
 
          <%@include file="All_Components/footer.jsp" %>
     </body>
