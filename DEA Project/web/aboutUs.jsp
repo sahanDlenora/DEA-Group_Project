@@ -14,8 +14,7 @@
         <style>
             *{
                 padding: 0;
-                margin: 0;
-                font-family: 'josefin Sans',sans-serif;
+                margin: 0;               
                 box-sizing:border-box;
             }
             .about{
@@ -68,7 +67,7 @@
                 font-size: 18px;
                 margin-bottom: 45px;
             }
-            button{
+            .about-btn{
                 background:rgb(8, 201, 8);
                 color: aliceblue;
                 text-decoration: none;
@@ -78,10 +77,9 @@
                 border-radius: 30px;
                 transition: .4s;
             }
-            button:hover{
+            .about-btn:hover{
                 background: transparent;
                 border: 2px solid rgb(8, 201, 8);
-                cursor: pointer;
             } 
         </style>
     </head>
@@ -100,7 +98,7 @@
                             Rooted in quality and sustainability, our online marketplace bridges the gap between field and fork, 
                             empowering both growers and buyers alike. 
                             Join us in nurturing a healthier, greener world, one harvest at a time."</b></p>
-                            <button type="button">Let's Talk</button>
+                            <button class="about-btn" type="button">Let's Talk</button>
                     </div>
             </div>
         </section>    

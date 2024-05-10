@@ -56,7 +56,7 @@
                 
                 <div class=" text-center p-3">
                     <a href="login.jsp" class="btn btn-primary"><i class="fa fa-cart-plus" aria-hidden="true"></i>Add Cart</a>
-                    <a href="login.jsp" class="btn btn-danger"><i class="fa fa-usd" aria-hidden="true"></i><%= price %></a>
+                    <a href="login.jsp" class="btn btn-danger">Rs <%= price %></a>
                 </div>
                 
             </div>

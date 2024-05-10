@@ -80,9 +80,10 @@
 }
 .btn-search:hover {
     background-color: #3f7b99;
-    color: #e9eff2;
-    
-    
+    color: #e9eff2;       
+}
+.btn-search:focus {
+    box-shadow: none;    
 }
 .search-input {
     outline: none;
@@ -107,7 +108,9 @@
 {
     background-color:#18ffff ;
 }
-
+.btn-primary:focus {
+    box-shadow: none;
+}
 .c-header {
     background: #a5d9f0; 
 }

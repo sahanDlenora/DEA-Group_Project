@@ -263,5 +263,38 @@ public class ItemDao {
         
         return items;
     }
+    
+    public List<Item> getItemBySearch(String ch) {
+        
+        List<Item> items= new ArrayList<Item>();
+        try{
+            query = "select * from item_details where Iname like ? or Icategory like ? and Istatus=?";
+            pst = this.conn.prepareStatement(query);
+            pst.setString(1, "%"+ch+"%");
+            pst.setString(2, "%"+ch+"%");
+            pst.setString(3, "Active");
+            rs = pst.executeQuery();
+            
+            int i=1;
+            while(rs.next() && i<=4){
+                Item row = new Item();
+                row.setId(rs.getInt("Id"));
+                row.setName(rs.getString("Iname"));
+                row.setCategory(rs.getString("Icategory"));
+                row.setPrice(rs.getDouble("Iprice"));
+                row.setImage(rs.getString("img_name"));
+                row.setStatus(rs.getString("Istatus"));
+                
+                items.add(row);
+                
+                i++;
+            }
+            
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        
+        return items;
+    }
        
 }
