@@ -4,10 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact Us</title>
-<%@include file="allCss.jsp" %>
+        <%@include file="allCss.jsp" %>
 <style>
     body {
-        font-family: Arial, sans-serif;
         margin:  0;
         padding: 0;
         background-color: #f2f2f2;
@@ -27,7 +26,7 @@
         background-color: #fff;
         font-size: 50px ;
     }
-    h3{
+    .t2{
         font-family: initial ;
         text-align: center;
         background-color: #fff;
@@ -55,26 +54,7 @@
         height: 50px;
     }
 
-    input[type="submit"] {
-        background-color: orange ;
-        color: white;
-        padding: 10px 375px;
-        border: none;
-        border-radius: 20px;
-        cursor: pointer;
-        font-size: 16px;
-        
-    }
-
-    input[type="submit"]:hover {
-        background-color: #45a049;
-    }
     
-    
-    
-     
-    
-
     .container {
         max-width: 800px;
         margin: 50px auto;
@@ -108,9 +88,10 @@
 </style>
 </head>
 <body style="background-color:#f1f8e9">
+      <%@include file="../All_Components/navbar_after.jsp"%>
 <div class="container">
-    <h1>Contact Us</h1>
-    <h3>Any questions or remarks?Just write us a message!</h3>
+    <h1 class="text-success">Contact Us</h1>
+    <h3 class="t2">Any questions or remarks?Just write us a message!</h3>
     <form action="#" method="post">
         
            
@@ -127,29 +108,30 @@
         <label for="message">Message:</label>
         <textarea id="message" name="message" placeholder="Enter a message"required></textarea>
         
-        <input type="submit" value="Submit">
+        <input type="submit" class="btn btn-primary text-center w-100" value="Submit">
     </form>
     
 </div>
     <div class="container">
-    <h2>Contact Information</h2>
+        <h2 class="text-success">Contact Information</h2>
     
     <div class="contact-info">
         <div class="info">
             <h3>Phone Number</h3>
-            <p>(123) 456-7890</p>
+            <p>011-xxxxxxx</p>
         </div>
         <div class="info">
             <h3>Email</h3>
-            <p>example@example.com</p>
+            <p>plantme@gmail.com</p>
         </div>
         <div class="info">
             <h3>Address</h3>
-            <p>123 Main Street<br>
-            City, State, Zip Code</p>
+            <p>Pitipana - Thalagala Rd,<br>
+            Homagama</p>
         </div>
     </div>
 </div
-   
+  <%@include file="../All_Components/footer_after.jsp" %>
+
 </body>
 </html>

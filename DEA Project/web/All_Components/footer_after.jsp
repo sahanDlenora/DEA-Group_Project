@@ -35,9 +35,9 @@
             <div class="col-md-2">
                 <ul class="list-unstyled foo-title">
                     <li class="fw-bold my-2">CONTACT US</li>
-                    <li><a href="" class="text-decoration-none"><i class="fa-solid fa-location-dot"></i> Pitipana - Thalagala Rd, Homagama</a></li>
-                    <li><a href="" class="text-decoration-none"><i class="fa-solid fa-envelope"></i> plantme@gmail.com</a></li>
-                    <li><a href="" class="text-decoration-none"><i class="fa-solid fa-phone"></i> 0765755894</a></li>
+                    <li><a href="contact us_after.jsp" class="text-decoration-none"><i class="fa-solid fa-location-dot"></i> Pitipana - Thalagala Rd, Homagama</a></li>
+                    <li><a href="contact us_after.jsp" class="text-decoration-none"><i class="fa-solid fa-envelope"></i> plantme@gmail.com</a></li>
+                    <li><a href="contact us_after.jsp" class="text-decoration-none"><i class="fa-solid fa-phone"></i> 011-xxxxxx</a></li>
                     
                 </ul>
             </div>
