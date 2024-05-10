@@ -15,6 +15,10 @@
         <%@include file="allCss.jsp" %>
     </head>
     <body style="background-color:#f1f8e9">
+        
+        <%
+            Login ln = (Login)session.getAttribute("user-ob");
+        %>
 
         <%@include file="../All_Components/navbar_after.jsp"%>
          <!--start recent item-->    
@@ -41,7 +45,12 @@
                                 <% String ic = i.getCategory(); %>
                                 
                                 <div class="d-flex flex-row justify-content-around">
-                                    <a href="" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                    <%
+                                    if(ln != null)
+                                {%>
+                                    <a href="../CartServlet?Id=<%=idf%>&Iname=<%=n%>&Iprice=<%=p%>&user_id=<%=ln.getId()%>" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
+                                <%
+                                } %> 
                                     <a href="view_items_after.jsp?Id=<%=id%>&Iname=<%=n%>&Iprice=<%=p%>&img_name=<%=im%>&Istatus=<%=s%>&Icategory=<%=ic%>" class="btn btn-success btn-sm">View Details</a>
                                 </div>
                             </div>
