@@ -76,7 +76,7 @@
                         for (Item i : itemsR) {%>
                         
                      
-                    <div class="col-lg-3 col-md-6 ">
+                    <div class="col-lg-3 col-md-6 p-2">
                         <div class="card crd-ho">
                             <div class="card-body text-center">
                                 <img src="../admin/imgs/<%=i.getImage() %>" alt="" class="img-fluid card-img">
@@ -126,7 +126,7 @@
                         if (!itemsP.isEmpty()) {
                         for (Item i : itemsP) {%>
                         
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6 p-2">
                         <div class="card crd-ho">
                             <div class="card-body text-center">
                                 <img src="../admin/imgs/<%=i.getImage() %>" alt="" class="img-fluid card-img">
@@ -179,7 +179,7 @@
                         if (!itemsS.isEmpty()) {
                         for (Item i : itemsS) {%>
                         
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6 p-2">
                         <div class="card crd-ho">
                             <div class="card-body text-center">
                                 <img src="../admin/imgs/<%=i.getImage() %>" alt="" class="img-fluid card-img">
@@ -230,7 +230,7 @@
                         if (!itemsF.isEmpty()) {
                         for (Item i : itemsF) {%>
                         
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6 p-2">
                         <div class="card crd-ho">
                             <div class="card-body text-center">
                                 <img src="../admin/imgs/<%=i.getImage() %>" alt="" class="img-fluid card-img">
@@ -278,7 +278,7 @@
                         if (!itemsE.isEmpty()) {
                         for (Item i : itemsE) {%>
                         
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6 p-2">
                         <div class="card crd-ho">
                             <div class="card-body text-center">
                                 <img src="../admin/imgs/<%=i.getImage() %>" alt="" class="img-fluid card-img">
