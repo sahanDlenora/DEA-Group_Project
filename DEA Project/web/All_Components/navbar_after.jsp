@@ -15,10 +15,12 @@
             <h3 class="t">Plant.<i class="fa-brands fa-pagelines text-logo-icon"></i>.Me</h3>
         </div>
          <div class="col-md-6 col-lg-5 col-11 mx-auto my-auto"> 
-            <div class="input-group form-container">
-                <input class="form-control search-input" type="search" placeholder="Search Your Items...." aria-label="Search"  >
+            <form action="search_after.jsp" method="post">
+                <div class="input-group form-container">
+                    <input class="form-control search-input" type="search" name="ch" placeholder="Search Your Items...." aria-label="Search"  >
                 <button class="btn btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </div>            
+            </div> 
+            </form>           
         </div>
         <%
             Login login1 = (Login)session.getAttribute("user-ob");
