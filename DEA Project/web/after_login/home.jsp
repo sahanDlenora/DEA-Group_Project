@@ -66,9 +66,9 @@
                     <span class="sr-only">Next</span>
             </a>
         </div>
-         <!--start recent item-->    
+         <!--start new item-->    
         <div class="container">
-            <h3 class="text-center p-2 category-title">Recent Items</h3>
+            <h3 class="text-center p-2 category-title">New Items</h3>
             <div class="container my-3 text-center">
                 <div class="row">
                     <% 
@@ -113,7 +113,7 @@
                 </div>
             </div>         
         </div>
-         <!--end recent item--> 
+         <!--end new item--> 
          <hr>
          <!--start plants-->   
          

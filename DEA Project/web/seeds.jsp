@@ -26,7 +26,7 @@
                         if (!items.isEmpty()) {
                         for (Item i : items) {%>
                         
-                    <div class="col-lg-3 col-md-6 ">
+                    <div class="col-lg-3 col-md-6 p-2">
                         <div class="card crd-ho">
                             <div class="card-body text-center">
                                 <img src = "admin/imgs/<%=i.getImage() %>" class="img-fluid card-img" alt = "...">
@@ -42,7 +42,7 @@
                                 
                                 <div class="d-flex flex-row justify-content-around">
                                     <a href="login.jsp" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
-                                    <a href="view_items.jsp?Id=<%=id%>&Iname=<%=n%>&Iprice=<%=p%>&img_name=<%=im%>&Istatus=<%=s%>&Icategory=<%=ic%>" class="btn btn-success btn-sm" class="btn btn-success btn-sm" class="btn btn-success btn-sm">View Details</a>
+                                    <a href="view_items.jsp?Id=<%=id%>&Iname=<%=n%>&Iprice=<%=p%>&img_name=<%=im%>&Istatus=<%=s%>&Icategory=<%=ic%>" class="btn btn-success btn-sm">View Details</a>
                                 </div>
                             </div>
                         </div>

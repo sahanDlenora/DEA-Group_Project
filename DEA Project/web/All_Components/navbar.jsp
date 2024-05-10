@@ -1,15 +1,15 @@
 <div class="container-fluid" style="background-color: #00796b; height: 10px;"></div>
 
 <div class="container-fluid p-3 bg-nav">
-    <div class="row">
+    <div class="row text-center">
         <div class="col-md-3 text-logo">
             <h3 class="t">Plant.<i class="fa-brands fa-pagelines text-logo-icon"></i>.Me</h3>
         </div>
-        <div class="col-md-6">
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" >
-                <button class="btn btn-custom my-2 my-sm-0" type="submit">Search</button>
-            </form>
+        <div class="col-md-6 col-lg-5 col-11 mx-auto my-auto"> 
+            <div class="input-group form-container">
+                <input class="form-control search-input" type="search" placeholder="Search Your Items...." aria-label="Search"  >
+                <button class="btn btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>            
         </div>
         <div class="col-md-3">
             <a href="login.jsp" class="btn btn-lo"><i class="fa-solid fa-right-to-bracket"></i> Login</a>
