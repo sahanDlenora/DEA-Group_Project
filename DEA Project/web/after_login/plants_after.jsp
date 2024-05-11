@@ -52,7 +52,7 @@
                                 {%>
                                     <a href="../CartServlet?Id=<%=idp%>&Iname=<%=n%>&Iprice=<%=p%>&user_id=<%=ln.getId()%>" class="btn btn-danger btn-sm"><i class="fa-solid fa-cart-plus"></i> Add Cart</a>
                                 <%
-                                } %> 
+                                } %>  
                                     
                                     <a href="view_items_after.jsp?Id=<%=id%>&Iname=<%=n%>&Iprice=<%=p%>&img_name=<%=im%>&Istatus=<%=s%>&Icategory=<%=ic%>" class="btn btn-success btn-sm">View Details</a>
                                 </div>

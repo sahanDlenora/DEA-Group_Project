@@ -7,9 +7,7 @@
         <title>Insert Title Here</title>
         <%@include file="All_Components/allCss.jsp" %>
     </head>
-    <body style="background-color: #f0f1f2">
-        
-    </body>   
+    <body style="background-color:#f1f8e9"> 
     
     <%@include file="All_Components/navbar.jsp"%>
         
@@ -33,7 +31,7 @@
             <div class="col-md-6 text-center p-5 border bg-white">
                 
 
-                <h2><%= category %></h2> <br>
+                <h2 class="text-success"><%= category %></h2> <br>
                 
                 <h5 class="text-primary">Contact To Seller</h5>
                 <h5 class="text-primary"><i class="fa-regular fa-envelope"></i> Email: plantme@gmail.com</h5>
